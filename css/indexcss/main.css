@@ -1,0 +1,587 @@
+/* =========================================
+   HEADER / TOP BOXES (กล่องสีม่วง)
+   ========================================= */
+.box {
+    /* กล่องหลัก (1140px, จัดกึ่งกลาง) */
+    background-color: #66398A;
+    max-width: 1140px;
+    height: 50px;
+    margin: 0 auto;    /* จัดกึ่งกลาง */
+    position: relative;
+    top: 1px;
+}
+
+.box1 {
+    height: 50px;
+    width: 1140px;
+position: relative;
+    bottom: 16px;
+  
+}
+
+.text-box {
+    color: white;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top: 12px;
+}
+
+.text-box2 {
+    color: white;
+    font-size: 16px;
+    padding-left: 200px;
+
+}
+/* =========================================
+   MAIN CONTENT LAYOUT (ซ้าย: การ์ด / ขวา: ปฏิทิน)
+   ========================================= */
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.left-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.main-layout-wrapper {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 30px; /* ระยะห่างระหว่างคอลัมน์หลัก */
+    align-items: start; /* ให้คอลัมน์เริ่มจากด้านบน */
+}
+
+
+/* =========================================
+   COLUMN 1: SOCIAL CARDS
+   ========================================= */
+.social-column {
+    /* Background สีอ่อน */
+    background-color: #fcfcfc; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.social-card-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* จัดให้อยู่ระหว่างกัน */
+    padding: 0;
+}
+
+.social-card {
+    /* ให้ Card แบ่งกัน 2 ช่องในคอลัมน์ 1 */
+    width: calc(50% - 7.5px); 
+    height: 300px; /* ลดความสูงลงเล็กน้อย */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    font-size: 13px; /* ลดขนาด font ใน Card */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+
+.card-content {
+    padding: 8px 10px 0;
+    flex-grow: 1;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+.card-content p {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    line-height: 1.3;
+
+}
+.card-image {
+    width: 100%;
+    max-height: 190px;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+ 
+}
+
+.card-title {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.card-title:hover {
+    color: #8e44ad;
+}
+
+.post-date {
+     color: #8e44ad;
+    font-size: 16px;
+}
+
+
+/* --- ฝั่งขวา (Sidebar ปฏิทิน) --- */
+.right-sidebar {
+    width: 320px;
+    padding-left: 20px;
+    border-left: 2px dashed #8e44ad; 
+    min-height: 500px;
+}
+
+.sidebar-title {
+    color: #8e44ad;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: 4px solid #8e44ad;
+    padding-left: 10px;
+}
+
+.activity-list {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.activity-item {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.act-title {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.act-title:hover {
+    color: #8e44ad;
+}
+
+.act-date {
+    display: block;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.act-date i {
+    margin-right: 5px;
+}
+
+/* --- Dark Theme Cards --- */
+.social-card.dark-theme {
+    background-color: #242526;
+    color: #e4e6eb;
+    border: 1px solid #3e4042;
+}
+.social-card.dark-theme .card-header {
+    border-bottom: 1px solid #3e4042;
+}
+.social-card.dark-theme .page-name {
+    color: #e4e6eb;
+}
+.social-card.dark-theme .post-date {
+    color: #b0b3b8;
+}
+.social-card.dark-theme .post-description {
+    color: #e4e6eb;
+}
+.social-card.dark-theme .post-image {
+    border-top: 1px solid #3e4042;
+}
+
+
+/* =========================================
+   GALLERY GRID (แฟ้มภาพ)
+   ========================================= */
+.gallery-container {
+flex: 3; /* ให้พื้นที่ 3 ส่วน */
+    width: 100%; /* สำคัญ */
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    /* แบ่งเป็น 3 คอลัมน์ เท่าๆ กัน */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+/* Overlay: ส่วนที่แสดงข้อมูลชื่อแฟ้ม */
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 50%; /* ให้แถบคลุมขึ้นมาครึ่งนึง */
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)); 
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    padding: 10px 15px; 
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.gallery-item .overlay i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.gallery-item .overlay span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.gallery-item .overlay small {
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.gallery-item:hover img {
+    opacity: 0.8;
+}
+
+/* =========================================
+   LIGHTBOX MODAL (หน้าต่างดูรูปใหญ่)
+   ========================================= */
+.lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 9999; 
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95); 
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 85%;
+    max-width: 1000px;
+    max-height: 90vh;
+    text-align: center;
+}
+
+#lightbox-img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.close:hover { color: #bbb; }
+
+/* --- CSS ใหม่สำหรับปุ่ม Prev / Next ใน Lightbox --- */
+.lightbox-prev-btn, .lightbox-next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+/* ตำแหน่งปุ่ม Prev */
+.lightbox-prev-btn {
+    left: 0;
+}
+
+/* ตำแหน่งปุ่ม Next */
+.lightbox-next-btn {
+    right: 0;
+}
+
+/* Hover Effect */
+.lightbox-prev-btn:hover, .lightbox-next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* ---------------------------------------------------- */
+
+
+/* **หมายเหตุ: ส่วน CSS อื่นๆ ของ Gallery และ Lightbox ที่ไม่ได้กล่าวถึง ให้ใช้โค้ดเดิมครับ** */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* =========================================
+   RESPONSIVE (มือถือ)
+   ========================================= */
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .right-sidebar {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+        border-left: none;
+        border-top: 2px dashed #bdc3c7;
+    }
+    .social-card {
+        width: 100%;
+    }
+    .box, .box1, .box2 {
+        max-width: 100%;
+        position: relative; 
+        bottom: auto;
+        left: auto;
+    }
+    .footer {
+        top: auto;
+        position: relative;
+    }
+}
+
+.activity-layout {
+    display: flex;
+    gap: 30px; /* ระยะห่างระหว่าง Gallery กับ ปุ่มโซเชียล */
+    align-items: flex-start; /* จัดให้ชิดขอบบน */
+    padding: 10px;
+    
+}
+
+.e-service {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    min-width: 280px;
+}
+
+
+/* --- ดีไซน์ปุ่มพื้นฐาน (Shared Style) --- */
+.e-service a {
+    position: relative;
+    width: 100%;
+    height: 65px; /* เพิ่มความสูงให้น่ากด */
+    background-color: #ffffff;
+    border-radius: 15px; /* มุมโค้งมนสวยงาม */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 25px;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+    /* Typography */
+    font-size: 18px;
+    font-weight: 600;
+    color: #444; /* สีตัวอักษรเทาเข้ม ดูแพง */
+    
+    /* Shadow & Border */
+    border: none; /* ลบขอบหนาๆ เดิมออก */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* เงาบางๆ */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+/* --- Effect เวลาเอาเมาส์ชี้ (Hover) --- */
+.e-service a:hover {
+    transform: translateY(-5px); /* ลอยขึ้น */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* เงาชัดขึ้น */
+}
+
+/* --- แถบสีด้านซ้าย (Color Strip) --- */
+.e-service a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px; /* แถบสีหนา 8px */
+}
+
+/* --- เพิ่มไอคอน (ถ้ามี) ให้มีสีตามปุ่ม --- */
+.e-service a i {
+    font-size: 28px; /* ขยายขนาดไอคอนให้ใหญ่ขึ้น */
+    width: 40px;     /* เพิ่มพื้นที่รอบไอคอน */
+    text-align: center;
+    margin-right: 15px;
+}
+
+.st-button::before { background-color: #2ecc71; }
+.st-button:hover { background-color: #f0fff4; }
+.st-button i { color: #2ecc71; }
+
+.check-button::before { background-color: #5c237c; } 
+.check-button:hover { background-color: #cbbdda; }
+.check-button i { color: #5c237c; }
+
+.saveac-button::before { 
+    background-image: linear-gradient(to top, #339fca, #436bd8, #374af8);
+} 
+.saveac-button:hover { 
+    background-image: linear-gradient(to right, #71acc4, #788fcc, #959fff);
+}
+.saveac-button i { 
+    color: #3f51b5; }
+
+.dw-button::before { background-color: #cfdd0e; } 
+.dw-button:hover { background-color: #d1dda5; }
+.dw-button i { color: #cfdd0e; }
+
+.study-button::before { background-color: #f1c40f; } 
+.study-button:hover { background-color: #e9d982; }
+.study-button i { color: #f1bd00; }
+
+.parent-button::before { 
+    background-image: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}  
+.parent-button:hover { 
+    background-image: linear-gradient(to right, #fadc8b, #ffb984, #d65c93, #9f5cb9, #7078ca);
+}
+.parent-button i { color: #e91e63; }
+
+
+
+/* สำหรับมือถือ ถ้าต้องการตำแหน่งต่างกัน ให้เพิ่ม media query */
+@media (max-width: 768px) {
+    .activity-layout {
+        flex-direction: column; /* เปลี่ยนเป็นแนวตั้งเมื่อจอเล็ก */
+    }
+    
+    .gallery-container, 
+    .e-service {
+        width: 100%;
+        flex: none;
+        min-width: 0;
+    }
+}
+
+/* แถบสีม่วง */
+.purple-header {
+    background-color: #6a3b86; /* สีม่วงตามรูปภาพ */
+    color: #ffffff;            /* ตัวหนังสือสีขาว */
+    display: flex;
+    
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    padding: 10px 20px;        /* เว้นขอบด้านใน */
+    font-size: 16px;         /* ขนาดตัวอักษร */
+    border-radius: 4px 4px 0 0; /* มนมุมบนซ้าย-ขวา (ถ้าต้องการ) */
+margin-top: 15px;
+    margin-bottom: 15px;       /* ระยะห่างจากเนื้อหาด้านล่าง */
+    height: 30px;
+}
+
+/* ปรับแต่งไอคอนและข้อความฝั่งซ้าย */
+.header-left {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* ปรับแต่งไอคอน */
+.header-left i {
+    margin-right: 8px; /* ระยะห่างระหว่างไอคอนกับตัวหนังสือ */
+    font-size: 16px;
+}
+
+/* ปรับแต่งข้อความฝั่งขวา */
+.header-right {
+    font-weight: normal;
+    font-size: 16px;
+    /* ผลักตัวเองไปชิดขวาให้มากที่สุด */
+    margin-left: auto; 
+    
+    /* *** เพิ่มคุณสมบัตินี้เพื่อขยับเข้ามาซ้าย (ห่างจากขอบขวา) *** */
+    margin-right: 100px;
+}

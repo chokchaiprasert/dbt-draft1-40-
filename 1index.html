@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBTech</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="photo/DBTicon.jpg">
+    <link rel="stylesheet" href="css/indexcss/style.css">
+    <link rel="stylesheet" href="css/indexcss/main.css">
+    <link rel="stylesheet" href="css/indexcss/carousel.css">
+</head>
+
+<body>
+    <div class="top-line"></div>
+    <header class="top-header">
+        <div class="header">
+            <div class="container">
+                <a href="1index.html" class="logo">
+                    <img src="photo/DBT.png" alt="DBT Logo">
+                </a>
+
+                <div class="menu-toggle">&#9776;</div>
+
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">เกี่ยวกับแผนก</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="หลักสูตร.html" class="submenu-btn">หลักสูตร</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="#">ปวช.</a></li>
+                                    <li><a href="#">ปวส.</a></li>
+                                    <li><a href="#">ปวส.(ทวิภาคี)</a></li>
+                                </ul>
+                            </li>
+                             <li class="dropdown-submenu">
+                                <a href="แผนการเรียน.html" class="submenu-btn">แผนการเรียน</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="#">ปวช.</a></li>
+                                    <li><a href="#">ปวส.</a></li>
+                                    <li><a href="#">ปวส.(ทวิภาคี)</a></li>
+                                </ul>
+                            </li>
+                            <!--pdf หน้า 18-->
+                            <li><a href="จุดประสงค์.html">จุดประสงค์</a></li>
+                        </ul>
+                    </li>
+                    <!--ทำเป็นการ์ดใส่ชื่อแต่ล่ะคน-->
+                    <li><a href="4teacher.html">บุคลากร</a></li>
+
+                    <!--แก้เพิ่ม drop down-->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">นักเรียน</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn">ปวช.</a>
+                               
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn">ปวส.</a>
+                                
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn">ปวส.(ทวิภาคี)</a>
+                               
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!--แก้เพิ่ม drop down-->
+                    <!-- <li><a href="แผนการเรียน.html">แผนการเรียน</a></li  ทำ button เอาไฟล์แผนการเรียนมาใส่-->
+                    <!-- <li><a href="หลักสูตร.html">หลักสูตร</a></li  ทำ button เอาไฟล์หลักสูครมาใส่-->
+                    <!-- <li><a href="จำนวน.html">จำนวน</a></li> ทำเป็น power bi สถิติ-->
+
+                    <li><a href="6activity.html">กิจกรรม</a></li>
+                    <li><a href="7download.html">ดาวน์โหลด</a></li>
+                    <li><a href="8contract.html">ติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+
+            <div class="carousel" id="carousel">
+                <div class="carousel-track" id="track">
+
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <a href="http://dlcproject.lampangvc.ac.th/studentinfo/index.php">
+                            <img src="photo/20251106_084153_18.png" alt="กิจกรรม">
+                        </a>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <a href="http://www.lampangvc.ac.th/reg/index.php">
+                            <img src="photo/reg2569.png" alt="สมัครเรียน2569">
+                        </a>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <a href="http://lampangvc.ac.th/2021/news/3331">
+                            <img src="photo/cake&cookie.png" alt="cookie">
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Arrows -->
+                <button class="arrow prev" id="prev">❮</button>
+                <button class="arrow next" id="next">❯</button>
+
+                <!-- Dots -->
+                <div class="dots" id="dots"></div>
+            </div>
+
+            <div class="container">
+                <div class="box">
+                    <p class="text-box"><i class="fa fa-archive"></i> <strong>ข่าวประชาสัมพันธ์</strong></p>
+                </div>
+            </div>
+
+
+            <div class="main-layout">
+                <div class="left-content">
+
+                    <div class="column-1 social-column">
+                        <div class="social-card-wrapper">
+                            <div class="social-card">
+                                <div class="card-header">
+                                    <span class="post-date">23 พฤศจิกายน 2568</span>
+                                </div>
+                                <a href="http://lampangvc.ac.th/2021/news/3339" class="card-content">
+                                    <p class="card-title">
+                                        คณะผู้บริหารวิทยาลัยอาชีวศึกษาลําปาง<br>ร่วมต้อนรับเลขาธิการคณะกรรมการการอาชีวศึกษา<br>ในโอกาสตรวจเยี่ยมสถาบันการอาชีวศึกษาภาคเหนือ
+                                        1</p>
+                                    <img src="photo/ข่าว/DDmEjepEM2b20251124104510.jpg" alt="ประชาสัมพันธ์อบรม"
+                                        class="card-image">
+                                </a>
+                            </div>
+
+                            <div class="social-card">
+                                <div class="card-header">
+                                    <span class="post-date">21 พฤศจิกายน 2568</span>
+                                </div>
+                                <a href="http://lampangvc.ac.th/2021/news/3338" class="card-content">
+                                    <p class="card-title">องค์การนักวิชาชีพในอนาคตแห่งประเทศไทย (อวท.)
+                                        วิทยาลัยอาชีวศึกษาลำปาง รับการประเมินองค์การมาตรฐานดีเด่น ระดับจังหวัด
+                                        ประจำปีการศึกษา 2568</p>
+                                    <img src="http://www.lampangvc.ac.th/manage/img_activity/tbbeMxkkYrB20251121131822.jpg"
+                                        alt="ประชาสัมพันธ์อบรม" class="card-image">
+                                </a>
+                            </div>
+
+                            <div class="social-card">
+                                <div class="card-header">
+                                    <span class="post-date">20 พฤศจิกายน 2568</span>
+                                </div>
+                                <a href="http://lampangvc.ac.th/2021/news/3337" class="card-content">
+                                    <p class="card-title">วิทยาลัยอาชีวศึกษาลำปาง<br>
+                                        จัดกิจกรรมตักบาตรข้าวสารอาหารแห้งในวันพระ</p>
+                                    <img src="http://www.lampangvc.ac.th/manage/img_activity/sjzt3BAFCMm20251120120836.jpg"
+                                        alt="ประชาสัมพันธ์อบรม" class="card-image">
+                                </a>
+                            </div>
+
+                            <div class="social-card">
+                                <div class="card-header">
+                                    <span class="post-date">14 พฤศจิกายน 2568</span>
+                                </div>
+                                <a href="http://lampangvc.ac.th/2021/news/3335" class="card-content">
+                                    <p class="card-title">วิทยาลัยอาชีวศึกษาลำปาง คว้า 22
+                                        รางวัลชนะเลิศ<br>การแข่งขันทักษะวิชาชีพ
+                                        ทักษะวิชาพื้นฐาน<br>ระดับอาชีวศึกษาจังหวัดลำปาง ประจำปีการศึกษา 2568</p>
+                                    <img src="http://www.lampangvc.ac.th/manage/img_activity/FzTrdpyvsxF20251114162651.jpg"
+                                        alt="ประชาสัมพันธ์อบรม" class="card-image">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-sidebar">
+                    <h3 class="sidebar-title"> <i class="fa fa-bullhorn"></i> ข่าวประกาศ</i></h3>
+
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="act-content">
+                                <a href="http://lampangvc.ac.th/2021/news/3336" class="act-title">ประกาศ
+                                    รับสมัครนักเรียน นักศึกษา ผู้พิการ <br> ประจำปีการศึกษา 2569</a>
+                                <span class="act-date"><i class="fa fa-calendar"></i> 20 พฤศจิกายน 2568</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="act-content">
+                                <a href="http://lampangvc.ac.th/2021/news/3269" class="act-title">การรับสมัครนักเรียน
+                                    นักศึกษา รอบโควต้า <br> ประจำปีการศึกษา 2569</a>
+                                <span class="act-date"><i class="fa fa-calendar"></i> 17 กันยายน 2568</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="act-content">
+                                <a href="http://lampangvc.ac.th/2021/news/3222"
+                                    class="act-title">เชิญชวนผู้ที่สนใจเข้ารับการอบรมโครงการพัฒนาศักยภาพผู้เรียนอาชีวศึกษาลำปางในการเป็นผู้ประกอบการ</a>
+                                <span class="act-date"><i class="fa fa-calendar"></i> 12 มิถุนายน 2568</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="act-content">
+                                <a href="http://lampangvc.ac.th/2021/news/3196"
+                                    class="act-title">รายชื่อผู้ผ่านการสอบคัดเลือกเพื่อเข้าศึกษาต่อในระดับปริญญาตรีเทคโนโลยีบัณฑิตสาขาการบัญชี
+                                    (รอบทั่วไป เพิ่มเติม) ประจำปีการศึกษา 2568</a>
+                                <span class="act-date"><i class="fa fa-calendar"></i> 07 พฤษภาคม 2568</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="act-content">
+                                <a href="http://lampangvc.ac.th/2021/news/3194"
+                                    class="act-title">รายชื่อผู้มีสิทธิ์สอบเพื่อเข้าศึกษาต่อในระดับปริญญาตรีเทคโนโลยีบัณฑิตสาขาการบัญชี
+                                    (รอบทั่วไป เพิ่มเติม) ประจำปีการศึกษา 2568</a>
+                                <span class="act-date"><i class="fa fa-calendar"></i> 01 พฤษภาคม 2568</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="act-content">
+                                <a href="http://lampangvc.ac.th/2021/news/3183"
+                                    class="act-title">รับสมัครนักศึกษาเข้าต่อระดับปริญญาตรี เทคโนโลยีบัณฑิต (รอบทั่วไป
+                                    เพิ่มเติม) ประจำปีการศึกษา 2568</a>
+                                <span class="act-date"><i class="fa fa-calendar"></i> 09 เมษายน 2568</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="box1">
+                <div class="purple-header">
+                    <div class="header-left">
+                        <i class="fa fa-calendar"></i> กิจกรรม
+                    </div>
+
+                </div>
+                <div class="activity-layout">
+
+                    <div class="gallery-container">
+
+
+                        <div class="gallery-grid">
+                            <div class="gallery-item" onclick="openAlbum(0)">
+                                <img src="photo/alabum/gallery1/1.jpg" alt="ศึกษาดูงานนักศึกษาใหม่ระดับปวส.1">
+                                <div class="overlay">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>ศึกษาดูงานนักศึกษาใหม่ระดับปวส.1
+                                        การประยุกต์ใช้ธุรกิจดิจิทัลในการดำเนินธุรกิจแบบ exclusive</span>
+                                    <small>ดูทั้งหมด</small>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" onclick="openAlbum(1)">
+                                <img src="photo/alabum/gallery2/12.jpg"
+                                    alt="น้องใหม่ ปวช.1 ศึกษาดูงาน การประยุกต์ใช้เทคโนโลยีในการปฏิบัติงาน">
+                                <div class="overlay">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>น้องใหม่ ปวช.1 ศึกษาดูงาน การประยุกต์ใช้เทคโนโลยีในการปฏิบัติงาน</span>
+                                    <small>ดูทั้งหมด</small>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" onclick="openAlbum(2)">
+                                <img src="#" alt="#">
+                                <div class="overlay">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>#</span>
+                                    <small>ดูทั้งหมด</small>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" onclick="openAlbum(3)">
+                                <img src="#" alt="#">
+                                <div class="overlay">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>#</span>
+                                    <small>ดูทั้งหมด</small>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" onclick="openAlbum(4)">
+                                <img src="#" alt="#">
+                                <div class="overlay">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>#</span>
+                                    <small>ดูทั้งหมด</small>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" onclick="openAlbum(5)">
+                                <img src="#" alt="#">
+                                <div class="overlay">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>#</span>
+                                    <small>ดูทั้งหมด</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="myLightbox" class="lightbox">
+                            <span class="close cursor" onclick="closeLightbox()">&times;</span>
+                            <div class="lightbox-content">
+                                <img id="lightbox-img" src="" alt="">
+                            </div>
+                            <a class="lightbox-prev-btn" onclick="changeSlide(-1)">&#10094;</a>
+                            <a class="lightbox-next-btn" onclick="changeSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="e-service">
+                        <h3 class="sidebar-title"> <i class="fa fa-address-book-o"></i> E-SERVICE</i></h3>
+                        <a href="http://www.lampangvc.ac.th/reg/index.php" class="st-button" target="_blank">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span>สมัครเรียน</span>
+                        </a>
+                        
+                        <a href="https://std2018.vec.go.th/web/" class="check-button" target="_blank">
+                            <i class="fa fa-book"></i>
+                            <span>ตรวจสอบผลการเรียน</span>
+                        </a>
+                        <a href="http://dlcproject.lampangvc.ac.th/studentinfo/index.php" class="saveac-button"
+                            target="_blank">
+                            <i class="fa fa-id-badge"></i>
+                            <span>บันทึกข้อมูลกิจกรรม</span>
+                        </a>
+
+                        <a href="http://www.lampangvc.ac.th/2021/page/documents-student" class="dw-button"
+                            target="_blank">
+                            <i class="fa fa-file-text-o"></i>
+                            <span>ดาวน์โหลดเอกสาร</span>
+                        </a>
+
+                        <a href="http://lampangvc.ac.th/service/index.php?type=2" class="study-button" target="_blank">
+                            <i class="fa fa-graduation-cap"></i>
+                            <span>นักเรียน-นักศึกษา</span>
+                        </a>
+
+                        <a href="http://lampangvc.ac.th/service/index.php?type=3" class="parent-button" target="_blank">
+                            <i class="fa fa-users"></i>
+                            <span>ผู้ปกครอง</span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+    </main>
+    </div>
+    <div class="under-line"></div>
+
+    <footer class="main-footer">
+        <div class="footer-wrapper">
+
+            <div class="footer-column footer-info">
+                <div class="dbt-logo-large">
+                    <img src="photo/DBT.png" alt="DBT.tech Digital Business Technology Logo">
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>ติดต่อเรา</h4>
+                <p>
+                    ที่อยู่: 272 ถนนพหลโยธิน ตำบลหัวเวียง อำเภอเมือง จังหวัดลำปาง 52000<br>
+                    โทรศัพท์: 054 217 101
+                </p>
+                <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" class="map-link"><i class="fa fa-map-marker"></i>
+                    ดูแผนที่ (Google Maps)</a>
+            </div>
+
+            <div class="footer-column footer-social">
+                <h4>ติดตามเรา</h4>
+                <div class="social-links-container">
+                    <a href="https://www.facebook.com/DBTech.LVC" class="social-btn-lg facebook-btn">
+                        FB: เทคโนโลยีธุรกิจดิจิทัลวิทยาลัยอาชีวศึกษาลำปาง
+                    </a>
+                    <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn-lg tiktok-btn">
+                        TT: DBTech NEXTGEN PROJECT
+                    </a>
+                    <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn-lg instagram-btn">
+                        IG: dbtect.lvc
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    </div>
+
+</body>
+<script src="javascript/gallery.js"></script>
+<script src="javascript/Carousel autoplay.js"></script>
+<script src="javascript/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    font-family: "Prompt", sans-serif;
+    background-color: #dcdcdc; 
+}
+/* ---------------------------------- */
+/* --- Top Line --- */
+/* ---------------------------------- */
+.top-line {
+    width: 100%;
+    height: 10px;
+    background-color: #66398A; 
+    top : 0;
+    z-index: 999;
+     position: fixed;
+}
+
+.top-header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+}
+
+
+/* ---------------------------------- */
+/* --- Header Section --- */
+/* ---------------------------------- */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 2px ; 
+    padding-top: 5px;
+
+}
+
+.header .container {
+    height: 70px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    
+}
+
+.logo img {
+    height: 70px; 
+    width: auto; 
+    object-fit: contain; 
+    transform: scale(1.5); 
+    transform-origin: center center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #663399;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 8px 0;
+    display: block;
+}
+
+.menu li a:hover {
+    color: #FFC50F;
+}
+
+.menu-toggle {
+    display: none; 
+    font-size: 26px;
+    color: #663399;
+    cursor: pointer;
+}
+
+/* ---------------------------------- */
+/* Dropdown Menu Styles */
+/* ---------------------------------- */
+
+.menu li.dropdown {
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none;
+    list-style: none;
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    min-width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    border-top: 3px solid #663399;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 10px 15px; 
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 400;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f5f5f5;
+    color: #FFC50F;
+}
+
+.menu li.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+@media (max-width: 768px) {
+ 
+    .menu.open .dropdown-content {
+        position: static; 
+        box-shadow: none; 
+        border-top: none;
+        min-width: auto;
+        padding-left: 20px; 
+    }
+
+    .menu.open li.dropdown .dropdown-content {
+        display: none; 
+    }
+
+    .menu li.dropdown a.dropbtn {
+        border-bottom: none; 
+        font-weight: 500;
+    }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; 
+    }
+    
+    .header .container {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+    
+    .menu {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        padding: 0;
+    }
+    
+    .menu.open {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu li a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+}
+}
+
+.main-content {
+    max-width: 1140px;
+    margin: 100px auto 0; 
+    padding: 20px;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.container {
+    max-width: 1140px; 
+    margin: 0 auto;
+
+}   
+
+.under-line {
+    width: 100%;
+    height: 10px;
+    background-color: #66398A; 
+    margin-top: 10px; 
+    z-index: 999;
+position: relative;
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+.main-footer {
+   background-color: #f0f0f0; 
+    color: #f0f0f0;
+    margin-top: 0px; 
+    padding: 30px 0 0; 
+    font-family: Arial, sans-serif;
+}
+
+.footer-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    color: #FFC50F;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-info p, .footer-contact p {
+    color:#663399;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dbt-logo-large img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.map-link {
+    display: inline-block;
+    color: #ffd700; 
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.2s;
+}
+.map-link:hover {
+    color: #fff;
+}
+.map-link i {
+    margin-right: 5px;
+}
+
+/* Social Section */
+.social-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn-lg {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.social-btn-lg i {
+    font-size: 18px;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.facebook-btn { background-color: #3b5998; }
+.tiktok-btn { background-color: #000000; }
+.instagram-btn { 
+    background-color: #e4405f; 
+    background-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.social-btn-lg:hover {
+    filter: brightness(1.2);
+}
+
+@media (max-width: 800px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-column h4 {
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .social-links-container {
+        align-items: center;
+    }
+}
+
+
+.fb-btn { background-color: #663399; }

@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+1. หมวดการเรียน / นักเรียน (Academic & Students)
+<i class="fa fa-book"></i> fa fa-book : หนังสือ / บทเรียน
+
+<i class="fa fa-graduation-cap"></i> fa fa-graduation-cap : หมวกรับปริญญา / นักเรียน
+
+<i class="fa fa-certificate"></i> fa fa-certificate : ใบประกาศนียบัตร / เกียรติบัตร
+
+<i class="fa fa-university"></i> fa fa-university : มหาวิทยาลัย / สถานศึกษา
+
+<i class="fa fa-laptop"></i> fa fa-laptop : คอมพิวเตอร์ / การเรียนออนไลน์
+
+2. หมวดการสมัคร / เอกสาร (Application & Docs)
+<i class="fa fa-pencil-square-o"></i> fa fa-pencil-square-o : การเขียน / สมัครเรียน (แบบปัจจุบัน)
+
+<i class="fa fa-file-text-o"></i> fa fa-file-text-o : เอกสาร / ใบสมัคร
+
+<i class="fa fa-registered"></i> fa fa-registered : การลงทะเบียน
+
+<i class="fa fa-check-square-o"></i> fa fa-check-square-o : ตรวจสอบผล / การยืนยัน
+
+<i class="fa fa-download"></i> fa fa-download : ดาวน์โหลดเอกสาร
+
+3. หมวดบุคลากร / ผู้ปกครอง (People)
+<i class="fa fa-users"></i> fa fa-users : กลุ่มคน / ผู้ปกครอง / ชุมชน
+
+<i class="fa fa-user-circle-o"></i> fa fa-user-circle-o : โปรไฟล์บุคคล / ครู
+
+<i class="fa fa-id-card-o"></i> fa fa-id-card-o : บัตรประจำตัว / เจ้าหน้าที่
+
+<i class="fa fa-address-book-o"></i> fa fa-address-book-o : สมุดรายชื่อ / ทำเนียบรุ่น
+
+<i class="fa fa-home"></i> fa fa-home : บ้าน / ผู้ปกครอง
+
+4. หมวดข่าวสาร / กิจกรรม (News & Activities)
+<i class="fa fa-bullhorn"></i> fa fa-bullhorn : โทรโข่ง / ประกาศข่าว
+
+<i class="fa fa-newspaper-o"></i> fa fa-newspaper-o : หนังสือพิมพ์ / ข่าวสาร
+
+<i class="fa fa-calendar"></i> fa fa-calendar : ปฏิทินกิจกรรม
+
+<i class="fa fa-camera"></i> fa fa-camera : ภาพถ่าย / แกลเลอรี
+
+<i class="fa fa-trophy"></i> fa fa-trophy : รางวัล / ผลงานนักเรียน
+
+5. หมวดติดต่อสอบถาม (Contact)
+<i class="fa fa-phone"></i> fa fa-phone : โทรศัพท์
+
+<i class="fa fa-envelope"></i> fa fa-envelope : อีเมล / จดหมาย
+
+<i class="fa fa-map-marker"></i> fa fa-map-marker : แผนที่ / ที่ตั้ง
+
+<i class="fa fa-facebook-square"></i> fa fa-facebook-square : Facebook
+
+<i class="fa fa-comments"></i> fa fa-comments : แชท / สอบถาม
+
+
+
+
+แบบที่ 1
+<li class="dropdown">
+                    <a href="#" class="dropbtn">นักเรียน</a>
+                    <ul class="dropdown-content">
+                        <li class="dropdown-submenu">
+                              <a href="#" class="submenu-btn">แผนการเรียน</a>
+                                 <ul class="dropdown-content-sub">
+                                    <li><a href="#">ปวช</a></li>
+                                    <li><a href="#">ปวส</a></li>
+                                </ul>
+                            </li>
+                <li class="dropdown-submenu">
+                    <a href="#" class="submenu-btn">จำนวน</a>
+                    <ul class="dropdown-content-sub">
+                        <li><a href="#">ปวช</a></li>
+                        <li><a href="#">ปวส</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+
+แบบที่ 2
+ <li class="dropdown">
+                    <a href="#" class="dropbtn">นักเรียน</a>
+                    <ul class="dropdown-content">
+                        <li class="dropdown-submenu">
+                              <a href="#" class="submenu-btn">ปวช.</a>
+                                 <ul class="dropdown-content-sub">
+                                     <li><a href="#">แผนการเรียน</a></li>
+                                     <li><a href="#">จำนวน</a></li>
+                                </ul>
+                            </li>
+                <li class="dropdown-submenu">
+                    <a href="#" class="submenu-btn">ปวส.</a>
+                    <ul class="dropdown-content-sub">
+                        <li><a href="#">แผนการเรียน</a></li>
+                        <li><a href="#">จำนวน</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>

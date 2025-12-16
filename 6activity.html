@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="photo/DBTicon.jpg">
+    <link rel="stylesheet" href="css/activity.css">
+    <title>กิจกรรม</title>
+</head>
+<body>
+    <div class="top-line"></div>
+    <header class="top-header">
+        <div class="header">
+        <div class="container">
+            <a href="1index.html" class="logo">
+                <img src="photo/DBT.png" alt="DBT Logo">
+            </a>
+            
+            <div class="menu-toggle">&#9776;</div> 
+
+            <ul class="menu">
+                <li class="dropdown">
+                <a href="#" class="dropbtn">เกี่ยวกับแผนก</a> 
+                <ul class="dropdown-content">
+                    <li><a href="ประวัติ.html">ประวัติ</a></li>
+                    <li><a href="พันธกิจ.html">พันธกิจ</a></li>
+                </ul>
+                </li>
+                <li><a href="4teacher.html">บุคลากร</a></li>
+                <li class="dropdown">
+                <a href="#" class="dropbtn">นักเรียน</a> 
+                <ul class="dropdown-content">
+                    <li><a href="ปวช.html">ปวช.</a></li>
+                    <li><a href="ปวส.html">ปวส.</a></li>
+                </ul>
+                </li>
+                <li><a href="6activity.html">กิจกรรม</a></li>
+                <li><a href="7download.html">ดาวน์โหลด</a></li>
+                <li><a href="8contract.html">ติดต่อ</a></li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </header>
+
+<div class="container">
+        <main class="main-content">
+
+   <div class="container">
+ <div class="box1">
+    <div class="purple-header">
+           <strong><i class="fa fa-calendar"></i> กิจกรรม</strong> 
+    </div>
+<div class="activity-layout">
+
+<div class="gallery-container">
+    
+
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openAlbum(0)">
+            <img src="photo/alabum/gallery1/1.jpg" alt="ศึกษาดูงานนักศึกษาใหม่ระดับปวส.1">
+            <div class="overlay">
+                <i class="fa fa-folder-open"></i>
+                <span>ศึกษาดูงานนักศึกษาใหม่ระดับปวส.1 การประยุกต์ใช้ธุรกิจดิจิทัลในการดำเนินธุรกิจแบบ exclusive</span>
+                <small>ดูทั้งหมด</small>
+            </div>
+        </div>
+        
+        <div class="gallery-item" onclick="openAlbum(1)">
+            <img src="photo/alabum/gallery2/12.jpg" alt="น้องใหม่ ปวช.1 ศึกษาดูงาน การประยุกต์ใช้เทคโนโลยีในการปฏิบัติงาน">
+            <div class="overlay">
+                <i class="fa fa-folder-open"></i>
+                <span>น้องใหม่ ปวช.1 ศึกษาดูงาน การประยุกต์ใช้เทคโนโลยีในการปฏิบัติงาน</span>
+                <small>ดูทั้งหมด</small>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openAlbum(2)">
+            <img src="#" alt="#">
+            <div class="overlay">
+                <i class="fa fa-folder-open"></i>
+                <span>#</span>
+                <small>ดูทั้งหมด</small>
+            </div>
+        </div>
+        
+        <div class="gallery-item" onclick="openAlbum(3)">
+            <img src="#" alt="#">
+            <div class="overlay">
+                <i class="fa fa-folder-open"></i>
+                <span>#</span>
+                <small>ดูทั้งหมด</small>
+            </div>
+        </div>
+        
+        <div class="gallery-item" onclick="openAlbum(4)">
+            <img src="#" alt="#">
+            <div class="overlay">
+                <i class="fa fa-folder-open"></i>
+                <span>#</span>
+                <small>ดูทั้งหมด</small>
+            </div>
+        </div>
+        
+        <div class="gallery-item" onclick="openAlbum(5)">
+            <img src="#" alt="#">
+            <div class="overlay">
+                <i class="fa fa-folder-open"></i>
+                <span>#</span>
+                <small>ดูทั้งหมด</small>
+            </div>
+    </div>
+</div>
+<div id="myLightbox" class="lightbox">
+    <span class="close cursor" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    <a class="lightbox-prev-btn" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="lightbox-next-btn" onclick="changeSlide(1)">&#10095;</a>
+</div>
+</div>         
+
+</div>
+
+</main>
+</div>
+
+<div class="under-line"></div>
+
+<footer class="main-footer">
+    <div class="footer-wrapper">
+        
+        <div class="footer-column footer-info">
+            <div class="dbt-logo-large">
+                <img src="photo/DBT.png" alt="DBT.tech Digital Business Technology Logo"> 
+            </div>
+        </div>
+        
+        <div class="footer-column footer-contact">
+            <h4>ติดต่อเรา</h4>
+            <p>
+                ที่อยู่: 272 ถนนพหลโยธิน ตำบลหัวเวียง อำเภอเมือง จังหวัดลำปาง 52000<br>
+                โทรศัพท์: 054 217 101
+            </p>
+            <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" class="map-link"><i class="fa fa-map-marker"></i> ดูแผนที่ (Google Maps)</a>
+        </div>
+        
+        <div class="footer-column footer-social">
+            <h4>ติดตามเรา</h4>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/DBTech.LVC" class="social-btn-lg facebook-btn">
+                    <i class="fa fa-facebook"></i> FB: เทคโนโลยีธุรกิจดิจิทัลวิทยาลัยอาชีวศึกษาลำปาง
+                </a>
+                <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn-lg tiktok-btn">
+                     <i class="fa fa-tiktiok"></i> TT: DBTech NEXTGEN PROJECT
+                </a>
+                <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn-lg instagram-btn">
+                    <i class="fa fa-instagram"></i> IG: dbtect.lvc
+                </a>
+            </div>
+        </div>
+
+    </div>  
+</footer>
+
+
+<script src="javascript/activity.js"></script>
+</body>
+</html>
