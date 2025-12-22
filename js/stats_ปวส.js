@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 labels: ['ปวส.1', 'ปวส.2'],
                 datasets: [{
                     label: 'จำนวนนักเรียน (คน)',
-                    data: [52, 57], // **แก้ไขตัวเลขตรงนี้ตามจริง**
+                    data: [0, 0], // **แก้ไขตัวเลขตรงนี้ตามจริง**
                     backgroundColor: [
                         colorPurple, colorPurple, colorPurple, 
                     ],
                     borderRadius: 5,
-                    barPercentage: 0.6, // ปรับความกว้างแท่ง
+                    barPercentage: 0.6, 
                 }]
             },
             options: {
@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 scales: {
                     y: { 
                         beginAtZero: true,
-                        grid: { color: '#f0f0f0' } // สีเส้นตารางจางๆ
+                        grid: { color: '#f0f0f0' } 
                     },
                     x: {
-                        grid: { display: false } // ซ่อนเส้นตารางแนวตั้ง
+                        grid: { display: false } 
                     }
                 },
                 plugins: {
-                    legend: { display: false }, // ซ่อนป้ายชื่อด้านบน
+                    legend: { display: false }, 
                     tooltip: {
                         backgroundColor: '#333',
                         titleFont: { family: 'Prompt' },
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // -------------------------------------------------------
-    // 2. Doughnut Chart Config (กราฟโดนัท - สัดส่วน ปวช./ปวส.)
+    // กราฟวงกลม 
     // -------------------------------------------------------
     const pieChartElement = document.getElementById('levelPieChart');
     if (pieChartElement) {
@@ -61,16 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['ชาย', 'หญิง'],
                 datasets: [{
-                    data: [33, 76], // **แก้ไขตัวเลขตรงนี้ (ปวช รวม, ปวส รวม)**
+                    data: [0, 0], 
                     backgroundColor: [colorBlue, colorPink],
-                    borderWidth: 0, // ไม่เอาเส้นขอบ
+                    borderWidth: 0, 
                     hoverOffset: 10
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                cutout: '60%', // ความกว้างรูตรงกลาง (ยิ่งเยอะยิ่งบาง)
+                cutout: '60%', 
                 plugins: {
                     legend: { 
                         position: 'bottom',
