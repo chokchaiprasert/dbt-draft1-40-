@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBTech</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="photo/DBTicon.jpg">
     <link rel="stylesheet" href="css/indexcss/style.css">
     <link rel="stylesheet" href="css/indexcss/main.css">
     <link rel="stylesheet" href="css/indexcss/carousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +21,7 @@
     <header class="top-header">
         <div class="header">
             <div class="container">
-                <a href="1index.html" class="logo">
+                <a href="index.html" class="logo">
                     <img src="photo/DBT.png" alt="DBT Logo">
                 </a>
 
@@ -29,52 +32,44 @@
                         <a href="#" class="dropbtn">เกี่ยวกับแผนก</a>
                         <ul class="dropdown-content">
                             <li class="dropdown-submenu">
-                                <a href="หลักสูตร.html" class="submenu-btn">หลักสูตร</a>
+                                <a href="#" class="submenu-btn">หลักสูตร</a>
                                 <ul class="dropdown-content-sub">
-                                    <li><a href="#">ปวช.</a></li>
-                                    <li><a href="#">ปวส.</a></li>
-                                    <li><a href="#">ปวส.(ทวิภาคี)</a></li>
+                                    <li><a href="หลักสูตรปวช.html">ปวช.</a></li>
+                                    <li><a href="หลักสูตรปวส.html">ปวส.</a></li>
                                 </ul>
                             </li>
-                             <li class="dropdown-submenu">
+                            <li class="dropdown-submenu">
                                 <a href="แผนการเรียน.html" class="submenu-btn">แผนการเรียน</a>
                                 <ul class="dropdown-content-sub">
-                                    <li><a href="#">ปวช.</a></li>
-                                    <li><a href="#">ปวส.</a></li>
-                                    <li><a href="#">ปวส.(ทวิภาคี)</a></li>
+                                    <li><a href="แผนการเรียนปวช.html">ปวช.</a></li>
+                                    <li><a href="แผนการเรียนปวส.html">ปวส.</a></li>
+                                    <li><a href="แผนการเรียนปวส(ทวิภาคี).html">ปวส.(ทวิภาคี)</a></li>
                                 </ul>
                             </li>
-                            <!--pdf หน้า 18-->
                             <li><a href="จุดประสงค์.html">จุดประสงค์</a></li>
                         </ul>
                     </li>
-                    <!--ทำเป็นการ์ดใส่ชื่อแต่ล่ะคน-->
+
                     <li><a href="4teacher.html">บุคลากร</a></li>
 
-                    <!--แก้เพิ่ม drop down-->
+
                     <li class="dropdown">
                         <a href="#" class="dropbtn">นักเรียน</a>
                         <ul class="dropdown-content">
                             <li class="dropdown-submenu">
-                                <a href="#" class="submenu-btn">ปวช.</a>
-                               
+                                <a href="จำนวนปวช.html" class="submenu-btn">
+                                     ปวช.</a>
                             </li>
                             <li class="dropdown-submenu">
-                                <a href="#" class="submenu-btn">ปวส.</a>
-                                
+                                <a href="จำนวนปวส.html" class="submenu-btn">
+                                     ปวส.</a>
                             </li>
                             <li class="dropdown-submenu">
-                                <a href="#" class="submenu-btn">ปวส.(ทวิภาคี)</a>
-                               
+                                <a href="#" class="submenu-btn">  ปวส.ทวิภาคี</a>
                             </li>
 
                         </ul>
                     </li>
-
-                    <!--แก้เพิ่ม drop down-->
-                    <!-- <li><a href="แผนการเรียน.html">แผนการเรียน</a></li  ทำ button เอาไฟล์แผนการเรียนมาใส่-->
-                    <!-- <li><a href="หลักสูตร.html">หลักสูตร</a></li  ทำ button เอาไฟล์หลักสูครมาใส่-->
-                    <!-- <li><a href="จำนวน.html">จำนวน</a></li> ทำเป็น power bi สถิติ-->
 
                     <li><a href="6activity.html">กิจกรรม</a></li>
                     <li><a href="7download.html">ดาวน์โหลด</a></li>
@@ -88,7 +83,7 @@
     <div class="container">
         <main class="main-content">
 
-            <div class="carousel" id="carousel">
+            <div class="carousel" id="carousel" data-aos="zoom-in">
                 <div class="carousel-track" id="track">
 
                     <!-- Slide 1 -->
@@ -123,13 +118,13 @@
             </div>
 
             <div class="container">
-                <div class="box">
+                <div class="box" data-aos="fade-up">
                     <p class="text-box"><i class="fa fa-archive"></i> <strong>ข่าวประชาสัมพันธ์</strong></p>
                 </div>
             </div>
 
 
-            <div class="main-layout">
+            <div class="main-layout" data-aos="fade-down-right">
                 <div class="left-content">
 
                     <div class="column-1 social-column">
@@ -189,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="right-sidebar">
+                <div class="right-sidebar" data-aos="fade-down-left">
                     <h3 class="sidebar-title"> <i class="fa fa-bullhorn"></i> ข่าวประกาศ</i></h3>
 
                     <div class="activity-list">
@@ -236,8 +231,8 @@
                         <div class="activity-item">
                             <div class="act-content">
                                 <a href="http://lampangvc.ac.th/2021/news/3183"
-                                    class="act-title">รับสมัครนักศึกษาเข้าต่อระดับปริญญาตรี เทคโนโลยีบัณฑิต (รอบทั่วไป
-                                    เพิ่มเติม) ประจำปีการศึกษา 2568</a>
+                                    class="act-title">รับสมัครนักศึกษาเข้าต่อระดับปริญญาตรี เทคโนโลยีบัณฑิต
+                                    (รอบทั่วไป เพิ่มเติม) ประจำปีการศึกษา 2568</a>
                                 <span class="act-date"><i class="fa fa-calendar"></i> 09 เมษายน 2568</span>
                             </div>
                         </div>
@@ -250,13 +245,13 @@
 
 
             <div class="box1">
-                <div class="purple-header">
+                <div class="purple-header" data-aos="fade-up">
                     <div class="header-left">
                         <i class="fa fa-calendar"></i> กิจกรรม
                     </div>
 
                 </div>
-                <div class="activity-layout">
+                <div class="activity-layout" data-aos="fade-up-right">
 
                     <div class="gallery-container">
 
@@ -331,13 +326,13 @@
 
 
 
-                    <div class="e-service">
+                    <div class="e-service" data-aos="fade-up-left">
                         <h3 class="sidebar-title"> <i class="fa fa-address-book-o"></i> E-SERVICE</i></h3>
                         <a href="http://www.lampangvc.ac.th/reg/index.php" class="st-button" target="_blank">
                             <i class="fa fa-pencil-square-o"></i>
                             <span>สมัครเรียน</span>
                         </a>
-                        
+
                         <a href="https://std2018.vec.go.th/web/" class="check-button" target="_blank">
                             <i class="fa fa-book"></i>
                             <span>ตรวจสอบผลการเรียน</span>
@@ -372,9 +367,9 @@
     </div>
     </main>
     </div>
-    <div class="under-line"></div>
+    <div class="under-line" data-aos="fade-up"></div>
 
-    <footer class="main-footer">
+    <footer class="main-footer" data-aos="fade-up">
         <div class="footer-wrapper">
 
             <div class="footer-column footer-info">
@@ -413,11 +408,24 @@
 
 
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/Carousel autoplay.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            NProgress.start();
+        });
+        window.addEventListener('load', () => {
+            NProgress.done();
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-<script src="javascript/gallery.js"></script>
-<script src="javascript/Carousel autoplay.js"></script>
-<script src="javascript/menu.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </html>

@@ -24,6 +24,7 @@ body {
 }
 
 
+
 /* ---------------------------------- */
 /* --- Header Section --- */
 /* ---------------------------------- */
@@ -211,19 +212,6 @@ body {
     }
 }
 
-.purple-header {
-    background-color: #6a3b86; /* สีม่วงตามรูปภาพ */
-    color: #ffffff;            /* ตัวหนังสือสีขาว */
-    display: flex;
-    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
-    padding: 10px 20px;        /* เว้นขอบด้านใน */
-    font-size: 16px;         /* ขนาดตัวอักษร */
-    border-radius: 4px 4px 0 0; /* มนมุมบนซ้าย-ขวา (ถ้าต้องการ) */
-    margin-top: 0px;
-    margin-bottom: 15px;       /* ระยะห่างจากเนื้อหาด้านล่าง */
-    height: 30px;
-}
-
 .main-content {
     max-width: 1140px;
     margin: 100px auto 0; 
@@ -242,6 +230,19 @@ body {
 
 }   
 
+.purple-header {
+    background-color: #6a3b86; /* สีม่วงตามรูปภาพ */
+    color: #ffffff;            /* ตัวหนังสือสีขาว */
+    display: flex;
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    padding: 10px 20px;        /* เว้นขอบด้านใน */
+    font-size: 16px;         /* ขนาดตัวอักษร */
+    border-radius: 4px 4px 0 0; /* มนมุมบนซ้าย-ขวา (ถ้าต้องการ) */
+    margin-top: 0px;
+    margin-bottom: 15px;       /* ระยะห่างจากเนื้อหาด้านล่าง */
+    height: 30px;
+}
+
 .under-line { 
     width: 100%; 
     height: 10px; 
@@ -259,7 +260,7 @@ body {
 @media (max-width: 900px) {
     .under-line {
         /* ค่าสำหรับมือถือ (ลดลงมาให้น้อยๆ) */
-        margin-top: 2850px; 
+        margin-top: 10px; 
     }
 }
 
@@ -333,6 +334,65 @@ body {
 .close { top: 20px; right: 30px; font-size: 40px; }
 .lightbox-prev-btn { top: 50%; left: 10px; font-size: 40px; }
 .lightbox-next-btn { top: 50%; right: 10px; font-size: 40px; }
+
+
+/* กล่องคลุม Iframe */
+.pdf-viewer-container {
+    width: 100%;
+    max-width: 1000px; /* จำกัดความกว้างไม่ให้ใหญ่เกินไปในจอใหญ่ */
+    margin: 20px auto; /* จัดกึ่งกลาง */
+    background-color: #525659; /* สีพื้นหลังเหมือนโปรแกรม PDF ทั่วไป */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    
+    /* [PC] ความสูงปกติ */
+    height: 800px; 
+}
+
+.pdf-viewer-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* ปุ่มสำรองใต้ PDF (ซ่อนใน PC ก็ได้ หรือโชว์ตลอดก็ได้) */
+.pdf-fallback-btn {
+    max-width: 600px;
+    margin: 10px auto 30px;
+    display: none; /* ซ่อนใน PC (ถ้าอยากโชว์ให้ลบบรรทัดนี้) */
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (มือถือ)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    .pdf-viewer-container {
+        /* [Mobile] ให้สูง 70% ของหน้าจอ เพื่อให้เลื่อนดูได้สะดวก */
+        height: 70vh; 
+        border-radius: 0; /* มือถืออาจจะไม่ต้องมนมุมมากก็ได้ */
+    }
+
+    /* โชว์ปุ่มดาวน์โหลดสำรองในมือถือ เพราะบางเครื่อง Iframe อาจไม่ทำงาน */
+    .pdf-fallback-btn {
+        display: block; 
+        padding: 0 15px;
+    }
+    
+    /* ปรับปุ่มสำรองให้เล็กกระชับ */
+    .pdf-fallback-btn .download-bar-btn {
+        padding: 10px 15px;
+        background: #f0f0f0;
+        color: #333;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    .pdf-fallback-btn .file-name {
+        font-size: 14px;
+    }
+}
 
 /* Container */
 .download-list-container {

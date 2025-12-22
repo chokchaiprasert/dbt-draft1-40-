@@ -3,12 +3,21 @@ body {
     font-family: "Prompt", sans-serif;
     background-color: #dcdcdc;
     padding-top: 100px;
+    animation: fade 1s ease-in;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* ---------------------------------- */
 /* --- Top Line --- */
 /* ---------------------------------- */
-
 .top-line {
     width: 100%;
     height: 10px;
@@ -41,7 +50,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .logo img {
@@ -50,6 +58,7 @@ body {
     object-fit: contain;
     transform: scale(1.5);
     transform-origin: center center;
+    transition: all 0.3s ease;
 }
 
 .menu {
@@ -81,10 +90,8 @@ body {
 }
 
 /* ---------------------------------- */
-/* Dropdown Menu Styles */
+/* Dropdown Menu Styles (Desktop) */
 /* ---------------------------------- */
-
-/* --- เมนูหลัก --- */
 .menu li.dropdown {
     position: relative;
 }
@@ -107,7 +114,6 @@ body {
 .dropdown-content li {
     width: 100%;
     position: relative;
-    /* เพิ่มเพื่อให้ลูก (Submenu) อ้างอิงตำแหน่งได้ */
 }
 
 .dropdown-content li a {
@@ -125,105 +131,174 @@ body {
 }
 
 /* แสดงผลเมื่อ Hover (คอมพิวเตอร์) */
-.menu li.dropdown:hover>.dropdown-content {
+.menu li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
-/* =========================================
-   ส่วนที่เพิ่มใหม่: Dropdown ชั้นที่ 2 (Submenu)
-   ========================================= */
+/* Submenu (Desktop) */
 .dropdown-content-sub {
     display: none;
     position: absolute;
     left: 100%;
-    /* ดีดออกไปทางขวา */
     top: 0;
-    /* เริ่มต้นที่ขอบบนของรายการแม่ */
     min-width: 200px;
     background-color: #ffffff;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     list-style: none;
     padding: 0;
     border-left: 3px solid #663399;
-    /* สีตัดกันให้รู้ว่าเป็นชั้นที่ 2 */
 }
 
-/* แสดง Submenu เมื่อ Hover รายการแม่ (เช่น ปวช./ปวส.) */
-.dropdown-content li:hover>.dropdown-content-sub {
+.dropdown-content li:hover > .dropdown-content-sub {
     display: block;
 }
 
+
 /* =========================================
-   Responsive (มือถือ)
+   MOBILE RESPONSIVE (All fixes included)
    ========================================= */
 @media (max-width: 768px) {
+    
     .container {
-        padding: 0 20px;
+        padding: 0 20px; 
     }
-
+    
+    /* 1. ลดความสูง Header */
     .header .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        height: 50px; /* ลดจาก 70px */
     }
 
+    /* 2. ปรับขนาด Logo */
+    .logo img {
+        height: 40px; 
+        transform: scale(1.2); 
+        margin-left: 10px; 
+    }
+    
+    /* 3. ปุ่ม Hamburger */
     .menu-toggle {
-        display: block;
+        display: block; 
+        cursor: pointer;
+        position: relative;
+        z-index: 1100;
     }
-
+    
+    /* 4. Menu Slide จากขวา */
     .menu {
-        display: none;
+        display: flex; /* มั่นใจว่าเป็น flex */
         flex-direction: column;
-        width: 100%;
-        gap: 0;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 10;
+        
+        position: fixed;
+        /* คำนวณตำแหน่ง Top: 10px(เส้นบน) + 5px(padding) + 50px(header) = 65px */
+        top: 65px; 
+        right: -100%; /* ซ่อนไว้ขวาสุด */
+        
+        width: 280px;
+        height: calc(100vh - 65px); /* สูงเต็มจอหักหัวออก */
+        
+        background-color: #ffffff;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         padding: 0;
+        margin: 0;
+        gap: 0;
+        
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        overflow-y: auto;
     }
-
+    
+    /* Class สำหรับเปิดเมนู */
     .menu.open {
-        display: flex;
+        right: 0;
+    }
+    
+    /* ปรับ Body padding ให้รับกับ Header ที่เตี้ยลง */
+    body {
+        padding-top: 70px;
     }
 
+    /* สไตล์ลิสต์เมนูในมือถือ */
     .menu li {
         width: 100%;
+        text-align: left;
     }
 
     .menu li a {
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f5f5f5;
+        padding: 15px 25px;
+        display: block;
     }
 
-    /* จัดการ Dropdown ในโหมดมือถือ (ให้เรียงต่อกันลงมา) */
+    /* --- Accordion Dropdown Logic --- */
+
+    /* A. ปิด Hover Effect เดิมทิ้ง */
+    .menu li.dropdown:hover > .dropdown-content,
+    .menu li.dropdown-submenu:hover > .dropdown-content-sub {
+        display: none; 
+    }
+
+    /* B. ซ่อน Dropdown เป็นค่าเริ่มต้น */
     .menu.open .dropdown-content,
     .menu.open .dropdown-content-sub {
+        display: none !important;
         position: static;
-        display: block;
-        /* บนมือถือเปิดค้างไว้หรือใช้ JS ควบคุม */
         box-shadow: none;
-        border-top: none;
-        border-left: 2px solid #eee;
-        min-width: auto;
-        padding-left: 20px;
-        background-color: #fafafa;
+        border: none;
+        background-color: #f9f9f9;
+        width: 100%;
+        padding-left: 0;
     }
 
-    /* ย่อหน้าเมนูชั้นที่ 3 (ปวช.1, 2) เข้าไปอีก */
-    .dropdown-content-sub {
+    /* C. แสดงผลเมื่อมีคลาส .active (กดแล้ว) */
+    .menu.open li.dropdown.active > .dropdown-content,
+    .menu.open li.dropdown-submenu.active > .dropdown-content-sub {
+        display: block !important;
+        animation: fadeIn 0.3s ease;
+    }
+
+    /* D. ไอคอนลูกศร */
+    .dropbtn::after, 
+    .submenu-btn::after {
+        content: '\f107'; 
+        font-family: 'FontAwesome';
+        float: right;
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    /* หมุนลูกศรเมื่อ Active */
+    li.dropdown.active > .dropbtn::after,
+    li.dropdown-submenu.active > .submenu-btn::after {
+        transform: rotate(180deg);
+    }
+    
+    /* E. ย่อหน้าเมนูย่อย */
+    .dropdown-content li a {
         padding-left: 40px !important;
-        background-color: #f0f0f0 !important;
+        background-color: #f9f9f9;
+        font-size: 15px;
+    }
+    
+    .dropdown-content-sub li a {
+        padding-left: 60px !important;
+        background-color: #f0f0f0;
+        border-left: 4px solid #66398A;
     }
 }
 
+/* Animation ค่อยๆ ปรากฏ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 
+/* ---------------------------------- */
+/* Layout & Footer */
+/* ---------------------------------- */
 .container {
     max-width: 1140px;
     margin: 0 auto;
-
 }
 
 /* เส้นสีม่วงคั่นก่อนเริ่ม Footer */
@@ -235,34 +310,23 @@ body {
     position: static;
     z-index: 1;
     clear: both;
-
-    /* ค่าสำหรับ PC (หน้าจอใหญ่) */
-    margin-top: 570px;
+    margin-top: 570px; /* ค่าสำหรับ PC */
 }
 
-/* --- เพิ่มส่วนนี้เพื่อปรับให้พอดีกับมือถือ --- */
 @media (max-width: 900px) {
     .under-line {
-        /* ค่าสำหรับมือถือ (ลดลงมาให้น้อยๆ) */
-        margin-top: 2850px;
+        margin-top: 2550px; /* ค่าสำหรับมือถือ */
     }
 }
 
-/* ส่วน Footer หลัก */
 .main-footer {
     background-color: #f0f0f0;
-
-    /* แก้ไข: ลบค่า 590px ออก เพื่อให้ Footer ต่อจากเส้นสีม่วงสวยๆ */
     margin-top: 0;
-
     color: #333;
-
-    /* เว้นระยะขอบในของ Footer เอง */
     padding-top: 30px;
     padding-bottom: 20px;
 }
 
-/* ส่วนจัดเรียงเนื้อหาใน Footer */
 .footer-wrapper {
     max-width: 1140px;
     margin: 0 auto;
@@ -273,7 +337,6 @@ body {
     justify-content: space-between;
 }
 
-/* คอลัมน์ใน Footer */
 .footer-column {
     flex: 1;
     min-width: 250px;
@@ -293,7 +356,6 @@ body {
     max-width: 200px;
 }
 
-/* ปุ่มโซเชียล */
 .social-btn-lg {
     display: flex;
     align-items: center;
@@ -304,14 +366,8 @@ body {
     margin-bottom: 5px;
 }
 
-.facebook-btn {
-    background-color: #3b5998;
-}
-
-.tiktok-btn {
-    background-color: #000000;
-}
-
+.facebook-btn { background-color: #3b5998; }
+.tiktok-btn { background-color: #000000; }
 .instagram-btn {
     background-color: #e4405f;
     background-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
@@ -344,20 +400,6 @@ body {
     cursor: pointer;
 }
 
-.close {
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-}
-
-.lightbox-prev-btn {
-    top: 50%;
-    left: 10px;
-    font-size: 40px;
-}
-
-.lightbox-next-btn {
-    top: 50%;
-    right: 10px;
-    font-size: 40px;
-}
+.close { top: 20px; right: 30px; font-size: 40px; }
+.lightbox-prev-btn { top: 50%; left: 10px; font-size: 40px; }
+.lightbox-next-btn { top: 50%; right: 10px; font-size: 40px; }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถิติจำนวนนักเรียนปวช.</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="photo/DBTicon.jpg">
+    
+    <link rel="stylesheet" href="css/indexcss/style.css">
+    <link rel="stylesheet" href="css/stats_ปวช.css">
+</head>
+<body>
+
+  <div class="top-line"></div>
+    <header class="top-header">
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="photo/DBT.png" alt="DBT Logo">
+                </a>
+
+                <div class="menu-toggle">&#9776;</div>
+
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">เกี่ยวกับแผนก</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn">หลักสูตร</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="หลักสูตรปวช.html">ปวช.</a></li>
+                                    <li><a href="หลักสูตรปวส.html">ปวส.</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="แผนการเรียน.html" class="submenu-btn">แผนการเรียน</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="แผนการเรียนปวช.html">ปวช.</a></li>
+                                    <li><a href="แผนการเรียนปวส.html">ปวส.</a></li>
+                                    <li><a href="แผนการเรียนปวส(ทวิภาคี).html">ปวส.(ทวิภาคี)</a></li>
+                                </ul>
+                            </li>
+                            <!--pdf หน้า 18-->
+                            <li><a href="จุดประสงค์.html">จุดประสงค์</a></li>
+                        </ul>
+                    </li>
+                    <!--ทำเป็นการ์ดใส่ชื่อแต่ล่ะคน-->
+                    <li><a href="4teacher.html">บุคลากร</a></li>
+
+                    <!--แก้เพิ่ม drop down-->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">นักเรียน</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="จำนวนปวช.html" class="submenu-btn">ปวช.</a>
+
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="จำนวนปวส.html" class="submenu-btn">ปวส.</a>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn">ปวส.(ทวิภาคี)</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!--แก้เพิ่ม drop down-->
+                    <!-- <li><a href="แผนการเรียน.html">แผนการเรียน</a></li  ทำ button เอาไฟล์แผนการเรียนมาใส่-->
+                    <!-- <li><a href="หลักสูตร.html">หลักสูตร</a></li  ทำ button เอาไฟล์หลักสูครมาใส่-->
+                    <!-- <li><a href="จำนวน.html">จำนวน</a></li> ทำเป็น power bi สถิติ-->
+
+                    <li><a href="6activity.html">กิจกรรม</a></li>
+                    <li><a href="7download.html">ดาวน์โหลด</a></li>
+                    <li><a href="8contract.html">ติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+<div class="container">
+        <main class="main-content">
+    <div class="container main-wrapper" style="padding-top: 40px;">
+        
+        <div class="page-header">
+            <h2><i class="fa fa-bar-chart"></i> สถิติจำนวนนักเรียน ประจำปีการศึกษา 2568</h2>
+            <p>ข้อมูลแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</p>
+        </div>
+
+        <div class="kpi-container">
+            <div class="kpi-card purple">
+                <div class="kpi-icon"><i class="fa fa-users"></i></div>
+                <div class="kpi-info">
+                    <h3>นักเรียนทั้งหมด</h3>
+                    <span class="number">134</span>
+                    <span class="desc">คน</span>
+                </div>
+            </div>
+            <div class="kpi-card blue">
+                <div class="kpi-icon"><i class="fa fa-male"></i></div>
+                <div class="kpi-info">
+                    <h3>ชาย</h3>
+                    <span class="number">27</span>
+                    <span class="desc">คน</span>
+                </div>
+            </div>
+            <div class="kpi-card pink">
+                <div class="kpi-icon"><i class="fa fa-female"></i></div>
+                <div class="kpi-info">
+                    <h3>หญิง</h3>
+                    <span class="number">107</span>
+                    <span class="desc">คน</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            
+            <div class="chart-box">
+                <div class="chart-header">
+                    <h4><i class="fa fa-signal"></i> จำนวนนักเรียนแยกตามระดับชั้น</h4>
+                </div>
+                <div class="chart-canvas-container">
+                    <canvas id="studentBarChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-box">
+                <div class="chart-header">
+                    <h4><i class="fa fa-pie-chart"></i> สัดส่วนจำนวนนักเรียน ชาย หญิง</h4>
+                </div>
+                <div class="chart-canvas-container">
+                    <canvas id="levelPieChart"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chart-box" style="margin-top: 30px;">
+            <div class="chart-header">
+                <h4><i class="fa fa-table"></i> รายละเอียดรายห้องเรียน</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ระดับชั้น</th>
+                            <th>ห้อง</th>
+                            <th>ครูที่ปรึกษา</th>
+                            <th>ชาย</th>
+                            <th>หญิง</th>
+                            <th>รวม</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ปวช.1</td>
+                            <td>ชอท.68.2</td>
+                            <td>อ.</td>
+                            <td>10</td>
+                            <td>25</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td>ปวช.1</td>
+                            <td>ชอท.68.2</td>
+                            <td>อ.</td>
+                            <td>8</td>
+                            <td>27</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td>ปวช.2</td>
+                            <td>ชอท.67.1</td>
+                            <td>อ.</td>
+                            <td>12</td>
+                            <td>20</td>
+                            <td>32</td>
+                        </tr>
+                         <tr>
+                            <td>ปวช.2</td>
+                            <td>ชอท.67.2</td>
+                            <td>อ.</td>
+                            <td>12</td>
+                            <td>20</td>
+                            <td>32</td>
+                        </tr>
+                         <tr>
+                            <td>ปวช.3</td>
+                            <td>ชพค.66.1</td>
+                            <td>อ.</td>
+                            <td>12</td>
+                            <td>20</td>
+                            <td>32</td>
+                        </tr>
+                         <tr>
+                            <td>ปวช.3</td>
+                            <td>ชพค.66.2</td>
+                            <td>อ.</td>
+                            <td>12</td>
+                            <td>20</td>
+                            <td>32</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+        </main>
+    </div>
+
+    <div class="under-line" data-aos="fade-up"></div>
+
+    <footer class="main-footer" data-aos="fade-up">
+        <div class="footer-wrapper">
+
+            <div class="footer-column footer-info">
+                <div class="dbt-logo-large">
+                    <img src="photo/DBT.png" alt="DBT.tech Digital Business Technology Logo">
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>ติดต่อเรา</h4>
+                <p>
+                    ที่อยู่: 272 ถนนพหลโยธิน ตำบลหัวเวียง อำเภอเมือง จังหวัดลำปาง 52000<br>
+                    โทรศัพท์: 054 217 101
+                </p>
+                <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" class="map-link"><i class="fa fa-map-marker"></i>
+                    ดูแผนที่ (Google Maps)</a>
+            </div>
+
+            <div class="footer-column footer-social">
+                <h4>ติดตามเรา</h4>
+                <div class="social-links-container">
+                    <a href="https://www.facebook.com/DBTech.LVC" class="social-btn-lg facebook-btn">
+                        FB: เทคโนโลยีธุรกิจดิจิทัลวิทยาลัยอาชีวศึกษาลำปาง
+                    </a>
+                    <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn-lg tiktok-btn">
+                        TT: DBTech NEXTGEN PROJECT
+                    </a>
+                    <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn-lg instagram-btn">
+                        IG: dbtect.lvc
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="js/stats_ปวช.js"></script>
+
+
+
+</body>
+</html>

@@ -24,6 +24,7 @@ body {
 }
 
 
+
 /* ---------------------------------- */
 /* --- Header Section --- */
 /* ---------------------------------- */
@@ -211,22 +212,8 @@ body {
     }
 }
 
-.purple-header {
-    background-color: #6a3b86; /* สีม่วงตามรูปภาพ */
-    color: #ffffff;            /* ตัวหนังสือสีขาว */
-    display: flex;
-    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
-    padding: 10px 20px;        /* เว้นขอบด้านใน */
-    font-size: 16px;         /* ขนาดตัวอักษร */
-    border-radius: 4px 4px 0 0; /* มนมุมบนซ้าย-ขวา (ถ้าต้องการ) */
-    margin-top: 0px;
-    margin-bottom: 15px;       /* ระยะห่างจากเนื้อหาด้านล่าง */
-    height: 30px;
-}
-
 .main-content {
     max-width: 1140px;
-    margin: 100px auto 0; 
     padding: 20px;
     background-color: #ffffff; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -241,6 +228,19 @@ body {
     margin: 0 auto;
 
 }   
+
+.purple-header {
+    background-color: #6a3b86; /* สีม่วงตามรูปภาพ */
+    color: #ffffff;            /* ตัวหนังสือสีขาว */
+    display: flex;
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    padding: 10px 20px;        /* เว้นขอบด้านใน */
+    font-size: 16px;         /* ขนาดตัวอักษร */
+    border-radius: 4px 4px 0 0; /* มนมุมบนซ้าย-ขวา (ถ้าต้องการ) */
+    margin-top: 0px;
+    margin-bottom: 15px;       /* ระยะห่างจากเนื้อหาด้านล่าง */
+    height: 30px;
+}
 
 .under-line { 
     width: 100%; 
@@ -259,7 +259,7 @@ body {
 @media (max-width: 900px) {
     .under-line {
         /* ค่าสำหรับมือถือ (ลดลงมาให้น้อยๆ) */
-        margin-top: 2850px; 
+        margin-top: 10px; 
     }
 }
 
@@ -326,83 +326,139 @@ body {
     background-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
 
-/* Lightbox */
-.lightbox { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
-.lightbox-content { margin: 5% auto; display: block; max-width: 90%; max-height: 80vh; }
-.close, .lightbox-prev-btn, .lightbox-next-btn { position: absolute; color: #fff; cursor: pointer; }
-.close { top: 20px; right: 30px; font-size: 40px; }
-.lightbox-prev-btn { top: 50%; left: 10px; font-size: 40px; }
-.lightbox-next-btn { top: 50%; right: 10px; font-size: 40px; }
 
-/* Container */
-.download-list-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+.page-header {
+    margin-bottom: 30px;
+    border-left: 5px solid #66398A;
+    padding-left: 15px;
 }
-
-/* แบบที่ 10: Modern Floating Bar */
-.download-bar-btn {
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* เงานุ่มๆ */
-    transition: all 0.3s ease;
-    border-left: 6px solid #66398A; /* แถบสีด้านซ้าย */
-}
-
-.download-bar-btn:hover {
-    transform: translateY(-5px); /* ลอยขึ้น */
-    box-shadow: 0 15px 30px rgba(102, 57, 138, 0.15);
-}
-
-.icon-box {
-    background-color: #f3e5f5; /* พื้นหลังไอคอนสีม่วงอ่อน */
-    color: #66398A;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.text-content {
-    flex-grow: 1;
-}
-
-.file-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #444;
-    display: block;
-}
-
-.file-desc {
-    font-size: 14px;
-    color: #999;
-}
-
-.action-icon {
-    background-color: #66398A;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.download-bar-btn:hover .action-icon {
-    background-color: #FFC50F; /* เปลี่ยนเป็นสีเหลืองเมื่อชี้ */
+.page-header h2 {
+    margin: 0;
     color: #333;
+    font-size: 24px;
+}
+.page-header p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+/* --- 1. KPI Cards (กล่องตัวเลขบนสุด) --- */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.kpi-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+/* สีแยกแต่ละการ์ด */
+.kpi-card.purple { border-bottom-color: #66398A; }
+.kpi-card.blue { border-bottom-color: #3b5998; }
+.kpi-card.pink { border-bottom-color: #e4405f; }
+.kpi-card.yellow { border-bottom-color: #FFC50F; }
+
+.kpi-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 15px;
+    color: #555;
+}
+.kpi-card.purple .kpi-icon { background: rgba(102, 57, 138, 0.1); color: #66398A; }
+.kpi-card.blue .kpi-icon { background: rgba(59, 89, 152, 0.1); color: #3b5998; }
+.kpi-card.pink .kpi-icon { background: rgba(228, 64, 95, 0.1); color: #e4405f; }
+.kpi-card.yellow .kpi-icon { background: rgba(255, 197, 15, 0.1); color: #c49500; }
+
+.kpi-info h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+}
+.kpi-info .number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+.kpi-info .desc {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* --- 2. Charts Grid (พื้นที่กราฟ) --- */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* กราฟแท่งกว้างกว่ากราฟวงกลม */
+    gap: 20px;
+}
+
+.chart-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.chart-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.chart-header h4 {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.chart-canvas-container {
+    position: relative;
+    height: 300px; /* ความสูงกราฟ */
+    width: 100%;
+}
+
+/* --- 3. Table Style (ตาราง) --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+.data-table th {
+    background-color: #f9f9f9;
+    color: #66398A;
+    font-weight: 600;
+}
+.data-table tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .charts-grid {
+        grid-template-columns: 1fr; /* จอเล็กให้เรียงลงมา */
+    }
 }

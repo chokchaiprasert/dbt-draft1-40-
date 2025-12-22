@@ -1,105 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/teacher.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>บุคลากร - DBTech</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="photo/DBTicon.jpg">
-    <title>บุคลากร</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teacher.css">
 </head>
+
 <body>
+
     <div class="top-line"></div>
     <header class="top-header">
         <div class="header">
-        <div class="container">
-            <a href="1index.html" class="logo">
-                <img src="photo/DBT.png" alt="DBT Logo">
-            </a>
-            
-            <div class="menu-toggle">&#9776;</div> 
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="photo/DBT.png" alt="DBT Logo">
+                </a>
 
-            <ul class="menu">
-                <li class="dropdown">
-                <a href="#" class="dropbtn">เกี่ยวกับแผนก</a> 
-                <ul class="dropdown-content">
-                    <li><a href="ประวัติ.html">ประวัติ</a></li>
-                    <li><a href="พันธกิจ.html">พันธกิจ</a></li>
+                <div class="menu-toggle">&#9776;</div>
+
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">เกี่ยวกับแผนก</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn">หลักสูตร</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="หลักสูตรปวช.html">ปวช.</a></li>
+                                    <li><a href="หลักสูตรปวส.html">ปวส.</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="แผนการเรียน.html" class="submenu-btn">แผนการเรียน</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="แผนการเรียนปวช.html">ปวช.</a></li>
+                                    <li><a href="แผนการเรียนปวส.html">ปวส.</a></li>
+                                    <li><a href="แผนการเรียนปวส(ทวิภาคี).html">ปวส.(ทวิภาคี)</a></li>
+                                </ul>
+                            </li>
+                            <!--pdf หน้า 18-->
+                            <li><a href="จุดประสงค์.html">จุดประสงค์</a></li>
+                        </ul>
+                    </li>
+                    <!--ทำเป็นการ์ดใส่ชื่อแต่ล่ะคน-->
+                    <li><a href="4teacher.html">บุคลากร</a></li>
+
+                    <!--แก้เพิ่ม drop down-->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">นักเรียน</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="จำนวนปวช.html" class="submenu-btn">
+                                    หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.)</a>
+
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="จำนวนปวส.html" class="submenu-btn">
+                                    หลักสูตรประกาศนียบัตรวิชาชีพขั้นสูง (ปวส.)</a>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="submenu-btn"> หลักสูตรประกาศนียบัตรวิชาชีพขั้นสูง (ปวส.ทวิภาคี)</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="6activity.html">กิจกรรม</a></li>
+                    <li><a href="7download.html">ดาวน์โหลด</a></li>
+                    <li><a href="8contract.html">ติดต่อ</a></li>
                 </ul>
-                </li>
-                <li><a href="4teacher.html">บุคลากร</a></li>
-                <li class="dropdown">
-                <a href="#" class="dropbtn">นักเรียน</a> 
-                <ul class="dropdown-content">
-                    <li><a href="ปวช.html">ปวช.</a></li>
-                    <li><a href="ปวส.html">ปวส.</a></li>
-                </ul>
-                </li>
-                <li><a href="6activity.html">กิจกรรม</a></li>
-                <li><a href="7download.html">ดาวน์โหลด</a></li>
-                <li><a href="8contract.html">ติดต่อ</a></li>
-            </ul>
-        </div>
+            </div>
         </div>
         </div>
     </header>
-
-<div class="container">
+    <div class="container">
         <main class="main-content">
 
-ครูชญานันทน์ ธิราช	หัวหน้าแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล 
-ครูสายรุ้ง ทวีกิตติกร	 ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
-ครูประณิตา ศรีสมุทร            ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
-ครูชัยวัฒน์ วงศ์โท๊ะ             ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
-ครูวรกาญจน์ มานะ               ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
-ครูมายูร รัตนบุรุษ            ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
-ครูปวีณรัตน์ สิงหภิวัฒน์          ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
-ครูมณีนุช แสนขันติ            ครูประจำแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล
 
+            <div class="container main-wrapper" style="padding-top: 40px;">
 
+                <div class="page-title">
+                    <h2>บุคลากรทางการศึกษา</h2>
+                    <p>แผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</p>
+                </div>
 
-</div>
-</main>
+                <div class="head-section">
+                    <div class="teacher-card head-card">
+                        <div class="card-img-box">
+                            <img src="http://lampangvc.ac.th/managefiles/image/people/com/chayanunnew.jpg"
+                                alt="หัวหน้าแผนก">
+                        </div>
+                        <div class="card-content">
+                            <span class="special-badge"> หัวหน้าแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</span>
+                            <h3>นางชญานันทน์ ธิราช</h3>
 
+                            <p class="desc">
+                                ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ <br>วุฒิการศึกษา ปริญญาโท<br>วท.ม.
+                                (เทคโนโลยีสารสนเทศ)
+                            </p>
 
-<div class="under-line"></div>
+                        </div>
+                    </div>
+                </div>
 
-<footer class="main-footer">
-    <div class="footer-wrapper">
-        
-        <div class="footer-column footer-info">
-            <div class="dbt-logo-large">
-                <img src="photo/DBT.png" alt="DBT.tech Digital Business Technology Logo"> 
-                
+                <div class="section-divider">
+                    <span>ครูผู้สอนประจำแผนกวิชา</span>
+                </div>
+
+                <div class="teacher-grid">
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="http://lampangvc.ac.th/managefiles/image/people/com/sairunggg.jpg"
+                                alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นางสายรุ้ง ทวีกิตติกร</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ <br>
+                                วุฒิการศึกษา ปริญญาโท <br>
+                                วท.ม. (เทคโนโลยีสารสนเทศ)</p>
+
+                        </div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="photo/teacher3.jpg" alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นางประณิตา ศรีสมุทร</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ <br>
+                                วุฒิการศึกษา ปริญญาโท <br>
+                                วท.ม. (เทคโนโลยีสารสนเทศและการจัดการ)</p>
+                        </div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="photo/teacher4.jpg" alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นายชัยวัฒน์ วงศ์โท๊ะ</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ <br>
+                                วุฒิการศึกษา ปริญญาโท <br>
+                                วท.ม. (เทคโนโลยีสารสนเทศและการจัดการ)</p>
+
+                        </div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="photo/teacher2.jpg" alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นางสาววรกาญจน์ มานะ</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ <br>
+                                วุฒิการศึกษา ปริญญาโท <br>
+                                วศ.ม. (วิศวกรรมซอฟต์แวร์)</p>
+                        </div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="photo/teacher2.jpg" alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นางมายูร รัตนบุรุษ</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ <br>
+                                วุฒิการศึกษา ปริญญาโท <br>
+                                วท.ม. (เทคโนโลยีสารสนเทศและการจัดการ)</p>
+
+                        </div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="photo/teacher2.jpg" alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นางปวีณรัตน์ สิงหภิวัฒน์</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ<br>
+                                วุฒิการศึกษา ปริญญาโท<br>
+                                บธ.ม. (บริหารธุรกิจ)</p>
+                        </div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="card-img-box">
+                            <img src="photo/teacher2.jpg" alt="ครูผู้สอน">
+                        </div>
+                        <div class="card-content">
+                            <h3>นางมณีนุช แสนขันติ</h3>
+                            <span class="position">ครูประจำแผนก</span>
+                            <p class="desc">ตำแหน่ง พนักงานราชการ (ครู)<br>
+                                วุฒิการศึกษา ปริญญาโท<br>
+                                วท.ม. (เทคโนโลยีสารสนเทศและการจัดการ)</p>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
-        
-        <div class="footer-column footer-contact">
-            <h4>ติดต่อเรา</h4>
-            <p>
-                ที่อยู่: 272 ถนนพหลโยธิน ตำบลหัวเวียง อำเภอเมือง จังหวัดลำปาง 52000<br>
-                โทรศัพท์: 054 217 101
-            </p>
-            <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" class="map-link"><i class="fa fa-map-marker"></i> ดูแผนที่ (Google Maps)</a>
-        </div>
-        
-        <div class="footer-column footer-social">
-            <h4>ติดตามเรา</h4>
-            <div class="social-links-container">
-                <a href="https://www.facebook.com/DBTech.LVC" class="social-btn-lg facebook-btn">
-                    <i class="fa fa-facebook"></i> FB: เทคโนโลยีธุรกิจดิจิทัลวิทยาลัยอาชีวศึกษาลำปาง
-                </a>
-                <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn-lg tiktok-btn">
-                     <i class="fa fa-tiktiok"></i> TT: DBTech NEXTGEN PROJECT
-                </a>
-                <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn-lg instagram-btn">
-                    <i class="fa fa-instagram"></i> IG: dbtect.lvc
-                </a>
+        </main>
+    </div>
+    <div class="under-line" style="margin-top: 50px;"></div>
+    <footer class="main-footer" data-aos="fade-up">
+        <div class="footer-wrapper">
+
+            <div class="footer-column footer-info">
+                <div class="dbt-logo-large">
+                    <img src="photo/DBT.png" alt="DBT.tech Digital Business Technology Logo">
+                </div>
             </div>
+
+            <div class="footer-column footer-contact">
+                <h4>ติดต่อเรา</h4>
+                <p>
+                    ที่อยู่: 272 ถนนพหลโยธิน ตำบลหัวเวียง อำเภอเมือง จังหวัดลำปาง 52000<br>
+                    โทรศัพท์: 054 217 101
+                </p>
+                <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" class="map-link"><i class="fa fa-map-marker"></i>
+                    ดูแผนที่ (Google Maps)</a>
+            </div>
+
+            <div class="footer-column footer-social">
+                <h4>ติดตามเรา</h4>
+                <div class="social-links-container">
+                    <a href="https://www.facebook.com/DBTech.LVC" class="social-btn-lg facebook-btn">
+                        FB: เทคโนโลยีธุรกิจดิจิทัลวิทยาลัยอาชีวศึกษาลำปาง
+                    </a>
+                    <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn-lg tiktok-btn">
+                        TT: DBTech NEXTGEN PROJECT
+                    </a>
+                    <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn-lg instagram-btn">
+                        IG: dbtect.lvc
+                    </a>
+                </div>
+            </div>
+
         </div>
-
-    </div>  
-</footer>
-
+    </footer>
 </body>
+
 </html>

@@ -1,18 +1,20 @@
+/* =========================================================
+   1. CORE STYLES (ส่วนหลักของเว็บ Header/Footer/Menu)
+   ========================================================= */
 body {
     margin: 0;
     font-family: "Prompt", sans-serif;
-    background-color: #dcdcdc; 
+    background-color: #dcdcdc;
 }
-/* ---------------------------------- */
+
 /* --- Top Line --- */
-/* ---------------------------------- */
 .top-line {
     width: 100%;
     height: 10px;
     background-color: #66398A; 
     top : 0;
     z-index: 999;
-     position: fixed;
+    position: fixed;
 }
 
 .top-header {
@@ -23,16 +25,12 @@ body {
     z-index: 998;
 }
 
-
-/* ---------------------------------- */
 /* --- Header Section --- */
-/* ---------------------------------- */
 .header {
     background-color: #ffffff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    padding: 2px ; 
+    padding: 2px; 
     padding-top: 5px;
-
 }
 
 .header .container {
@@ -40,7 +38,6 @@ body {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    
 }
 
 .logo img {
@@ -79,10 +76,7 @@ body {
     cursor: pointer;
 }
 
-/* ---------------------------------- */
-/* Dropdown Menu Styles */
-/* ---------------------------------- */
-
+/* --- Dropdown Menu Styles --- */
 .menu li.dropdown {
     position: relative; 
 }
@@ -104,10 +98,11 @@ body {
 
 .dropdown-content li {
     width: 100%;
+    position: relative;
 }
 
 .dropdown-content li a {
-    color: #333;
+    color: #663399;
     padding: 10px 15px; 
     display: block;
     text-decoration: none;
@@ -120,29 +115,30 @@ body {
     color: #FFC50F;
 }
 
-.menu li.dropdown:hover .dropdown-content {
+/* แสดงผลเมื่อ Hover (คอมพิวเตอร์) */
+.menu li.dropdown:hover > .dropdown-content {
     display: block; 
 }
 
-@media (max-width: 768px) {
- 
-    .menu.open .dropdown-content {
-        position: static; 
-        box-shadow: none; 
-        border-top: none;
-        min-width: auto;
-        padding-left: 20px; 
-    }
+/* --- Dropdown ชั้นที่ 2 (Submenu) --- */
+.dropdown-content-sub {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 200px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    border-left: 3px solid #663399;
+}
 
-    .menu.open li.dropdown .dropdown-content {
-        display: none; 
-    }
+.dropdown-content li:hover > .dropdown-content-sub {
+    display: block;
+}
 
-    .menu li.dropdown a.dropbtn {
-        border-bottom: none; 
-        font-weight: 500;
-    }
-
+/* --- Responsive (มือถือ) --- */
 @media (max-width: 768px) {
     .container {
         padding: 0 20px; 
@@ -151,6 +147,7 @@ body {
     .header .container {
         flex-direction: row; 
         justify-content: space-between;
+        align-items: center;
     }
 
     .menu-toggle {
@@ -183,13 +180,29 @@ body {
         border-bottom: 1px solid #f0f0f0;
     }
 
-}
+    .menu.open .dropdown-content,
+    .menu.open .dropdown-content-sub {
+        position: static; 
+        display: block;
+        box-shadow: none; 
+        border-top: none;
+        border-left: 2px solid #eee;
+        min-width: auto;
+        padding-left: 20px; 
+        background-color: #fafafa;
+    }
+
+    .dropdown-content-sub {
+        padding-left: 40px !important;
+        background-color: #f0f0f0 !important;
+    }
 }
 
+/* --- Main Layout --- */
 .main-content {
     max-width: 1140px;
     margin: 100px auto 0; 
-    padding: 20px;
+    padding: 10px;
     background-color: #ffffff; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -201,7 +214,6 @@ body {
 .container {
     max-width: 1140px; 
     margin: 0 auto;
-
 }   
 
 .under-line {
@@ -210,15 +222,210 @@ body {
     background-color: #66398A; 
     margin-top: 10px; 
     z-index: 999;
-position: relative;
+    position: relative;
 }
 
 /* =========================================
-   FOOTER STYLES
+   2. TEACHER PAGE STYLES (ส่วนหน้าบุคลากร)
+   ========================================= */
+
+/* หัวข้อหน้า (Page Title) */
+.page-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.page-title h2 {
+    color: #66398A;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+.page-title p {
+    color: #777;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* --- ส่วนหัวหน้าแผนก (Head Section) --- */
+/* ==============================================
+   ส่วนที่ 1: หัวหน้าแผนก (HEAD SECTION) - ปรับขนาดลง
+   ============================================== */
+.head-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* การ์ดหัวหน้า (ปรับลดขนาดลง) */
+.teacher-card.head-card {
+    width: 100%;
+    max-width: 360px; /* แก้จาก 450px เป็น 360px (กะทัดรัดขึ้น) */
+    border-top: 5px solid #FFC50F;
+    transform: none; /* เอาคำสั่งขยาย (scale) ออก เพื่อไม่ให้เบลอหรือใหญ่เกิน */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* ลดเงาลงนิดหน่อย */
+    margin-top: 10px;
+}
+
+.teacher-card.head-card:hover {
+    transform: translateY(-5px); /* ขยับขึ้นนิดเดียวพอ */
+}
+
+/* รูปหัวหน้า (ปรับลดขนาดลง) */
+.teacher-card.head-card .card-img-box {
+    width: 100px; /* แก้จาก 200px เป็น 160px (เท่ากับครูคนอื่น แต่มีขอบทอง) */
+    height: 160px;
+    border: 4px solid #FFC50F; /* ขอบสีทอง */
+    margin-top: 30px;
+}
+
+.teacher-card.head-card h3 {
+    font-size: 22px; /* ลดฟอนต์ลงนิดหน่อยให้สมดุล */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* ป้ายตำแหน่ง (ปรับให้เล็กลงนิดนึง) */
+.special-badge {
+    background: linear-gradient(45deg, #FFC50F, #FFD700);
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px; /* ลดขนาดตัวอักษรป้าย */
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- เส้นคั่นส่วน (Section Divider) --- */
+.section-divider {
+    text-align: center;
+    position: relative;
+    margin: 40px 0;
+    z-index: 1;
+}
+.section-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: #ddd;
+    z-index: -1;
+}
+.section-divider span {
+    background: #f4f6f9; /* สีเดียวกับพื้นหลังเว็บ */
+    padding: 0 20px;
+    color: #66398A;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* --- ตารางครูทั่วไป (Teacher Grid) --- */
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px;
+    max-width: 1200px; /* จำกัดความกว้างรวม */
+    margin: 0 auto;
+}
+
+/* ดีไซน์การ์ดครูทั่วไป (Standard Card) */
+.teacher-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 5px solid #66398A; /* เส้นสีม่วง */
+    text-align: center;
+    position: relative;
+    height: 100%; /* ให้การ์ดสูงเท่ากันในแถว */
+}
+
+.teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(102, 57, 138, 0.2);
+}
+
+.card-img-box {
+    width: 140px;
+    height: 140px;
+    margin: 30px auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 0 20px 30px;
+}
+
+.card-content h3 {
+    margin: 0;
+    color: #444;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-content .position {
+    display: block;
+    color: #66398A;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-content .desc {
+    font-size: 13px;
+    color: #777;
+    margin: 10px 0 15px;
+    line-height: 1.5;
+}
+
+/* ปุ่มโซเชียล */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto; /* ดันไปล่างสุดถ้ามีเนื้อหาต่างกัน */
+}
+.social-icons a {
+    color: #bbb;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    background-color: #66398A;
+    color: #fff;
+}
+
+
+/* =========================================
+   3. FOOTER STYLES
    ========================================= */
 .main-footer {
-   background-color: #f0f0f0; 
-    color: #f0f0f0;
+    background-color: #f0f0f0; 
+    color: #333;
     margin-top: 0px; 
     padding: 30px 0 0; 
     font-family: Arial, sans-serif;
@@ -260,17 +467,16 @@ position: relative;
     margin-bottom: 10px;
 }
 
-
 .map-link {
     display: inline-block;
-    color: #ffd700; 
+    color: #663399;
     text-decoration: none;
     font-size: 14px;
     margin-top: 10px;
     transition: color 0.2s;
 }
 .map-link:hover {
-    color: #fff;
+    color: #FFC50F;
 }
 .map-link i {
     margin-right: 5px;
@@ -332,6 +538,3 @@ position: relative;
         align-items: center;
     }
 }
-
-
-.fb-btn { background-color: #663399; }
