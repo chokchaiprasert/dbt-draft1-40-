@@ -7,17 +7,17 @@
     <title>บุคลากร - DBTech</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="photo/DBTicon.jpg">
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/indexcss/header.css">
     <link rel="stylesheet" href="css/teacher.css">
 </head>
 
 <body>
 
     <div class="top-line"></div>
-     <header class="top-header">
+    <header class="top-header">
         <div class="header">
             <div class="container">
                 <a href="index.html" class="logo">
@@ -37,14 +37,7 @@
                                     <li><a href="หลักสูตรปวส.html">ปวส.</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown-submenu">
-                                <a href="แผนการเรียน.html" class="submenu-btn">แผนการเรียน</a>
-                                <ul class="dropdown-content-sub">
-                                    <li><a href="แผนการเรียนปวช.html">ปวช.</a></li>
-                                    <li><a href="แผนการเรียนปวส.html">ปวส.</a></li>
-                                    <li><a href="แผนการเรียนปวส(ทวิภาคี).html">ปวส.(ทวิภาคี)</a></li>
-                                </ul>
-                            </li>
+    
                             <li><a href="จุดประสงค์.html">จุดประสงค์</a></li>
                         </ul>
                     </li>
@@ -56,15 +49,27 @@
                         <a href="#" class="dropbtn">นักเรียน</a>
                         <ul class="dropdown-content">
                             <li class="dropdown-submenu">
-                                <a href="จำนวนปวช.html" class="submenu-btn">
-                                     ปวช.</a>
+                                <a href="#" class="submenu-btn">
+                                    ปวช.</a>
+                                    <ul class="dropdown-content-sub">
+                                    <li><a href="จำนวนปวช.html">จำนวน</a></li>
+                                    <li><a href="แผนการเรียนปวช.html">แผนการเรียน</a></li>
+                                </ul>
                             </li>
                             <li class="dropdown-submenu">
                                 <a href="จำนวนปวส.html" class="submenu-btn">
-                                     ปวส.</a>
+                                    ปวส.</a>
+                                    <ul class="dropdown-content-sub">
+                                    <li><a href="จำนวนปวส.html">จำนวน</a></li>
+                                    <li><a href="แผนการเรียนปวส.html">แผนการเรียน</a></li>
+                                </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a href="#" class="submenu-btn">  ปวส.ทวิภาคี</a>
+                                <a href="#" class="submenu-btn"> ปวส.ทวิภาคี</a>
+                                <ul class="dropdown-content-sub">
+                                    <li><a href="จำนวนปวส(ทวิภาคี).html">จำนวน</a></li>
+                                    <li><a href="แผนการเรียนปวส(ทวิภาคี).html">แผนการเรียน</a></li>
+                                </ul>
                             </li>
 
                         </ul>
@@ -76,7 +81,7 @@
                 </ul>
             </div>
         </div>
-        </div>
+
     </header>
     <div class="container">
         <main class="main-content">
@@ -214,43 +219,64 @@
             </div>
         </main>
     </div>
-    <div class="under-line" style="margin-top: 50px;"></div>
-    <footer class="main-footer" data-aos="fade-up">
-        <div class="footer-wrapper">
+ 
+<div class="footer-wrapper-white">
 
-            <div class="footer-column footer-info">
-                <div class="dbt-logo-large">
-                    <img src="photo/DBT.png" alt="DBT.tech Digital Business Technology Logo">
+        <div class="footer-top-line"></div>
+
+    <footer class="white-footer">
+            <div class="container">
+                <div class="footer-content">
+
+                    <div class="footer-col brand-col">
+                        <img src="photo/DBT.png" alt="DBT Logo" class="footer-logo">
+                        <p class="org-name">แผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</p>
+                        <p class="org-sub">วิทยาลัยอาชีวศึกษาลำปาง</p>
+                    </div>
+
+                    <div class="footer-col contact-col">
+                        <h3><i class="fa fa-address-card-o"></i> ติดต่อเรา</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>272 ถนนพหลโยธิน ตำบลหัวเวียง <br>อำเภอเมือง จังหวัดลำปาง 52000</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>054-217-101</span>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" target="_blank" class="map-link">
+                                    <i class="fa fa-location-arrow"></i> คลิกเพื่อดูแผนที่ Google Maps
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col social-col">
+                        <h3><i class="fa fa-rss"></i> ติดตามข่าวสาร</h3>
+                        <div class="social-buttons">
+                            <a href="https://www.facebook.com/DBTech.LVC" class="social-btn facebook" target="_blank">
+                                <i class="fa fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn tiktok" target="_blank">
+                                <i class="fa fa-tiktok"></i> TikTok
+                            </a>
+                            <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn instagram"
+                                target="_blank">
+                                <i class="fa fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="footer-column footer-contact">
-                <h4>ติดต่อเรา</h4>
-                <p>
-                    ที่อยู่: 272 ถนนพหลโยธิน ตำบลหัวเวียง อำเภอเมือง จังหวัดลำปาง 52000<br>
-                    โทรศัพท์: 054 217 101
-                </p>
-                <a href="https://maps.app.goo.gl/a8TtT2ZumM6u6zFq6" class="map-link"><i class="fa fa-map-marker"></i>
-                    ดูแผนที่ (Google Maps)</a>
+            <div class="footer-bottom">
+                <p>© 2026 Digital Business Technology, Lampang Vocational College.</p>
             </div>
-
-            <div class="footer-column footer-social">
-                <h4>ติดตามเรา</h4>
-                <div class="social-links-container">
-                    <a href="https://www.facebook.com/DBTech.LVC" class="social-btn-lg facebook-btn">
-                        FB: เทคโนโลยีธุรกิจดิจิทัลวิทยาลัยอาชีวศึกษาลำปาง
-                    </a>
-                    <a href="https://www.tiktok.com/@dbt.lvc.th" class="social-btn-lg tiktok-btn">
-                        TT: DBTech NEXTGEN PROJECT
-                    </a>
-                    <a href="https://www.instagram.com/dbtect.lvc/" class="social-btn-lg instagram-btn">
-                        IG: dbtect.lvc
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </footer>
+        </footer>
+</div>
 </body>
 
 </html>

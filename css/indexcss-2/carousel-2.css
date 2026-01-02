@@ -1,0 +1,119 @@
+/* =========================================
+   CAROUSEL STYLES (แก้ไขปุ่มเป็นเงาเฟด)
+   ========================================= */
+.carousel {
+    width: 100%;
+    max-width: 1140px; 
+    margin: 10px auto; 
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    /* PC: สูง 640px ตามต้นฉบับ / Mobile: Auto */
+    height: auto; 
+    aspect-ratio: 16/9; /* อัตราส่วน default สำหรับมือถือ */
+}
+
+@media (min-width: 901px) {
+    .carousel {
+        height: 640px; /* ขนาดเดิมสำหรับ PC */
+        aspect-ratio: auto;
+    }
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%; /* ให้เต็มพื้นที่ */
+    transition: transform .6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%; /* ให้เต็มพื้นที่ */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.slide a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;      
+    object-fit: cover; /* ให้รูปเต็มพื้นที่โดยไม่เสียสัดส่วน */
+    display: block;
+}
+
+/* --- Arrows (Gradient Fade Effect) --- */
+.arrow {
+    position: absolute;
+    top: 0;           
+    bottom: 0;        
+    height: 100%;     
+    width: 80px;      /* เพิ่มความกว้างเพื่อให้การไล่สีดูเนียนขึ้น */
+    border: none;
+    color: rgba(255, 255, 255, 0.7); /* สีไอคอนขาวโปร่งแสงเล็กน้อย */
+    font-size: 40px;  
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* ลบ background-color แบบเดิมออก */
+}
+
+/* ปุ่มซ้าย: ไล่สีจากซ้ายไปขวา */
+.prev { 
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); 
+    justify-content: flex-start; /* ชิดซ้าย */
+    padding-left: 10px;
+}
+
+/* ปุ่มขวา: ไล่สีจากขวาไปซ้าย */
+.next { 
+    right: 0; 
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+    justify-content: flex-end; /* ชิดขวา */
+    padding-right: 10px;
+}
+
+/* Hover Effect: สีเข้มขึ้นและไอคอนชัดขึ้น */
+.prev:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+}
+
+.next:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+}
+
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.dots button {
+    width: 12px; height: 12px;
+    background: rgba(255,255,255,0.5);
+    border: none; border-radius: 50%;
+    cursor: pointer;
+}
+.dots button.active { 
+    background: white; 
+}
