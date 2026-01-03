@@ -212,7 +212,7 @@
 
     /* ปรับ Body padding ให้รับกับ Header ที่เตี้ยลง */
     body {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     /* สไตล์ลิสต์เมนูในมือถือ */
