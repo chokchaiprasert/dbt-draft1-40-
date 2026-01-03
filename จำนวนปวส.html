@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สถิติจำนวนนักเรียนปวส.</title>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,10 +13,11 @@
     <link rel="stylesheet" href="css/indexcss/header.css">
     <link rel="stylesheet" href="css/stats.css">
 </head>
+
 <body>
 
-  <div class="top-line"></div>
-     <header class="top-header">
+    <div class="top-line"></div>
+    <header class="top-header">
         <div class="header">
             <div class="container">
                 <a href="index.html" class="logo">
@@ -82,135 +84,135 @@
         </div>
 
     </header>
-<div class="container">
+    <div class="container">
         <main class="main-content">
-    <div class="container main-wrapper" style="padding-top: 40px;">
-        
-        <div class="page-header">
-            <h2><i class="fa fa-bar-chart"></i> สถิติจำนวนนักเรียน ประจำปีการศึกษา 2568</h2>
-            <p>ข้อมูลแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</p>
-        </div>
+            <div class="container main-wrapper" style="padding-top: 40px;">
 
-        <div class="kpi-container">
-            <div class="kpi-card purple">
-                <div class="kpi-icon"><i class="fa fa-users"></i></div>
-                <div class="kpi-info">
-                    <h3>นักเรียนทั้งหมด</h3>
-                    <span class="number">0</span>
-                    <span class="desc">คน</span>
+                <div class="page-header">
+                    <h2><i class="fa fa-bar-chart"></i> สถิติจำนวนนักเรียน ประจำปีการศึกษา 2568</h2>
+                    <p>ข้อมูลแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</p>
                 </div>
-            </div>
-            <div class="kpi-card blue">
-                <div class="kpi-icon"><i class="fa fa-male"></i></div>
-                <div class="kpi-info">
-                    <h3>ชาย</h3>
-                    <span class="number">0</span>
-                    <span class="desc">คน</span>
-                </div>
-            </div>
-            <div class="kpi-card pink">
-                <div class="kpi-icon"><i class="fa fa-female"></i></div>
-                <div class="kpi-info">
-                    <h3>หญิง</h3>
-                    <span class="number">0</span>
-                    <span class="desc">คน</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="charts-grid">
-            
-            <div class="chart-box">
-                <div class="chart-header">
-                    <h4><i class="fa fa-signal"></i> จำนวนนักเรียนแยกตามระดับชั้น</h4>
+                <div class="kpi-container">
+                    <div class="kpi-card purple">
+                        <div class="kpi-icon"><i class="fa fa-users"></i></div>
+                        <div class="kpi-info">
+                            <h3>นักเรียนทั้งหมด</h3>
+                            <span class="number">0</span>
+                            <span class="desc">คน</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card blue">
+                        <div class="kpi-icon"><i class="fa fa-male"></i></div>
+                        <div class="kpi-info">
+                            <h3>ชาย</h3>
+                            <span class="number">0</span>
+                            <span class="desc">คน</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card pink">
+                        <div class="kpi-icon"><i class="fa fa-female"></i></div>
+                        <div class="kpi-info">
+                            <h3>หญิง</h3>
+                            <span class="number">0</span>
+                            <span class="desc">คน</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="chart-canvas-container">
-                    <canvas id="studentBarChart"></canvas>
+
+                <div class="charts-grid">
+
+                    <div class="chart-box">
+                        <div class="chart-header">
+                            <h4><i class="fa fa-signal"></i> จำนวนนักเรียนแยกตามระดับชั้น</h4>
+                        </div>
+                        <div class="chart-canvas-container">
+                            <canvas id="studentBarChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-box">
+                        <div class="chart-header">
+                            <h4><i class="fa fa-pie-chart"></i> สัดส่วนจำนวนนักเรียน ชาย หญิง</h4>
+                        </div>
+                        <div class="chart-canvas-container">
+                            <canvas id="levelPieChart"></canvas>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="chart-box">
-                <div class="chart-header">
-                    <h4><i class="fa fa-pie-chart"></i> สัดส่วนจำนวนนักเรียน ชาย หญิง</h4>
+                <div class="chart-box" style="margin-top: 30px;">
+                    <div class="chart-header">
+                        <h4><i class="fa fa-table"></i> รายละเอียดรายห้องเรียน</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ระดับชั้น</th>
+                                    <th>ห้อง</th>
+                                    <th>ครูที่ปรึกษา</th>
+                                    <th>ชาย</th>
+                                    <th>หญิง</th>
+                                    <th>รวม</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ปวส.1</td>
+                                    <td>สอท.68.1</td>
+                                    <td>อ.</td>
+                                    <td>10</td>
+                                    <td>25</td>
+                                    <td>35</td>
+                                </tr>
+                                <tr>
+                                    <td>ปวส.1</td>
+                                    <td>สอท.68.2</td>
+                                    <td>อ.</td>
+                                    <td>8</td>
+                                    <td>27</td>
+                                    <td>35</td>
+                                </tr>
+                                <tr>
+                                    <td>ปวส.1(ทวิภาคี)</td>
+                                    <td>สอท.67.3</td>
+                                    <td>อ.</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                    <td>ปวส.2</td>
+                                    <td>สอท.67.1</td>
+                                    <td>อ.</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                    <td>ปวส.2</td>
+                                    <td>สอท.67.2</td>
+                                    <td>อ.</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                    <td>ปวส.2(ทวิภาคี)</td>
+                                    <td>สอท.67.3</td>
+                                    <td>อ.</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td>32</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="chart-canvas-container">
-                    <canvas id="levelPieChart"></canvas>
-                </div>
-            </div>
 
-        </div>
-
-        <div class="chart-box" style="margin-top: 30px;">
-            <div class="chart-header">
-                <h4><i class="fa fa-table"></i> รายละเอียดรายห้องเรียน</h4>
             </div>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>ระดับชั้น</th>
-                            <th>ห้อง</th>
-                            <th>ครูที่ปรึกษา</th>
-                            <th>ชาย</th>
-                            <th>หญิง</th>
-                            <th>รวม</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ปวส.1</td>
-                            <td>สอท.68.1</td>
-                            <td>อ.</td>
-                            <td>10</td>
-                            <td>25</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <td>ปวส.1</td>
-                            <td>สอท.68.2</td>
-                            <td>อ.</td>
-                            <td>8</td>
-                            <td>27</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <td>ปวส.1(ทวิภาคี)</td>
-                            <td>สอท.67.3</td>
-                            <td>อ.</td>
-                            <td>12</td>
-                            <td>20</td>
-                            <td>32</td>
-                        </tr>
-                         <tr>
-                            <td>ปวส.2</td>
-                            <td>สอท.67.1</td>
-                            <td>อ.</td>
-                            <td>12</td>
-                            <td>20</td>
-                            <td>32</td>
-                        </tr>
-                         <tr>
-                            <td>ปวส.2</td>
-                            <td>สอท.67.2</td>
-                            <td>อ.</td>
-                            <td>12</td>
-                            <td>20</td>
-                            <td>32</td>
-                        </tr>
-                         <tr>
-                            <td>ปวส.2(ทวิภาคี)</td>
-                            <td>สอท.67.3</td>
-                            <td>อ.</td>
-                            <td>12</td>
-                            <td>20</td>
-                            <td>32</td>
-                        </tr>
-                        </tbody>
-                </table>
-            </div>
-        </div>
-
-    </div>
         </main>
     </div>
 
@@ -279,4 +281,5 @@
 
 
 </body>
+
 </html>
