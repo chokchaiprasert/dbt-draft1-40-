@@ -1,12 +1,12 @@
 // 1. โครงสร้างข้อมูล: กำหนด 6 แฟ้ม (Albums) และรูปภาพภายใน
 // *** สำคัญ: คุณต้องเปลี่ยนชื่อไฟล์ใน Array 'images' ให้เป็นไฟล์รูปภาพของคุณ ***
 const albums = [
-    {
+   {
         title: "เปิดรับสมัครนักเรียนใหม่",
-        thumbnail: "photo/alabum/gallery1/1.jpg", 
+        thumbnail: "photo/alabum/gallery1/1.jpg",
         images: [
-            "photo/alabum/gallery1/1.jpg", 
-            "photo/alabum/gallery1/2.jpg", 
+            "photo/alabum/gallery1/1.jpg",
+            "photo/alabum/gallery1/2.jpg",
             "photo/alabum/gallery1/3.jpg",
             "photo/alabum/gallery1/4.jpg",
             "photo/alabum/gallery1/5.jpg",
@@ -33,35 +33,47 @@ const albums = [
     },
     {
         title: "องค์กรนักวิชาชีพ",
-        thumbnail: "image_87383d.jpg",
+        thumbnail: "photo/alabum/gallery3/1.jpg",
         images: [
-            "image_87383d.jpg",
-            "reg2569.jpg"
+            "photo/alabum/gallery3/1.jpg",
+            "photo/alabum/gallery3/2.jpg",
+            "photo/alabum/gallery3/3.jpg",
+            "photo/alabum/gallery3/4.jpg",
+            "photo/alabum/gallery3/5.jpg"
         ]
     },
     {
         title: "เทคโนโลยีธุรกิจดิจิทัล",
-        thumbnail: "image_8746a6.png",
+        thumbnail: "photo/alabum/gallery4/1.jpg",
         images: [
-            "image_8746a6.png",
-            "20251106_084153_18.jpg"
+            "photo/alabum/gallery4/1.jpg",
+            "photo/alabum/gallery4/2.jpg",
+            "photo/alabum/gallery4/3.jpg",
+            "photo/alabum/gallery4/4.jpg",
+            "photo/alabum/gallery4/5.jpg"
         ]
+
     },
     {
         title: "ปฏิทินกิจกรรม",
-        thumbnail: "image_87b09e.png",
+        thumbnail: "photo/alabum/gallery5/1.jpg",
         images: [
-            "image_87b09e.png",
-            "image_87383d.jpg",
-            "image_e9f784.png"
+            "photo/alabum/gallery5/1.jpg",
+            "photo/alabum/gallery5/2.jpg",
+            "photo/alabum/gallery5/3.jpg",
+            "photo/alabum/gallery5/4.jpg",
+            "photo/alabum/gallery5/5.jpg"
         ]
     },
     {
         title: "รูปภาพสำรอง",
-        thumbnail: "image_e9f784.png",
+        thumbnail: "photo/alabum/gallery6/1.jpg",
         images: [
-            "image_e9f784.png",
-            "reg2569.jpg"
+            "photo/alabum/gallery6/1.jpg",
+            "photo/alabum/gallery6/2.jpg",
+            "photo/alabum/gallery6/3.jpg",
+            "photo/alabum/gallery6/4.jpg",
+            "photo/alabum/gallery6/5.jpg"
         ]
     }
 ];

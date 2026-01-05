@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const colorGrey = '#e0e0e0';
 
     // -------------------------------------------------------
-    // 1. Bar Chart Config (กราฟแท่ง - จำนวนนักเรียนแต่ละชั้นปี)
+    // Bar Chart Config (กราฟแท่ง - จำนวนนักเรียนแต่ละชั้นปี)
     // -------------------------------------------------------
     const barChartElement = document.getElementById('studentBarChart');
     if (barChartElement) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 labels: ['ปวช.1', 'ปวช.2', 'ปวช.3'],
                 datasets: [{
                     label: 'จำนวนนักเรียน (คน)',
-                    data: [34, 34, 66], // **แก้ไขตัวเลขตรงนี้ตามจริง**
+                    data: [34, 33, 65], // **แก้ไขตัวเลขตรงนี้ตามจริง**
                     backgroundColor: [
                         colorPurple, colorPurple, colorPurple, 
                     ],
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['ชาย', 'หญิง'],
                 datasets: [{
-                    data: [27, 107], // **แก้ไขตัวเลขตรงนี้ (ปวช รวม, ปวส รวม)**
+                    data: [27, 106], // **แก้ไขตัวเลขตรงนี้ (ปวช รวม, ปวส รวม)**
                     backgroundColor: [colorBlue, colorPink],
                     borderWidth: 0, // ไม่เอาเส้นขอบ
                     hoverOffset: 10

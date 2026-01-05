@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 labels: ['ปวส.1', 'ปวส.2'],
                 datasets: [{
                     label: 'จำนวนนักเรียน (คน)',
-                    data: [0, 0], // **แก้ไขตัวเลขตรงนี้ตามจริง**
+                    data: [46, 53], // **แก้ไขตัวเลขตรงนี้ตามจริง**
                     backgroundColor: [
                         colorPurple, colorPurple, colorPurple, 
                     ],
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['ชาย', 'หญิง'],
                 datasets: [{
-                    data: [0, 0], 
+                    data: [33, 66], 
                     backgroundColor: [colorBlue, colorPink],
                     borderWidth: 0, 
                     hoverOffset: 10
