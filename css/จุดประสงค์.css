@@ -5,6 +5,7 @@ body {
     padding-top: 90px;
 }
 
+
 .main-content {
      max-width: 1140px;
     margin: 20px auto 20px; 
@@ -292,7 +293,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 
 
 
